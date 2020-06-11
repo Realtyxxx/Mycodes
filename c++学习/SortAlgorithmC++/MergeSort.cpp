@@ -68,3 +68,5 @@ int main()
     }
     return 0;
 }
+
+//递归树层数(lgn+1),n个问题项，每个问题代价为c 所以最终为cnlgn+cn
