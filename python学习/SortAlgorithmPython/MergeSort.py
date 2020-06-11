@@ -1,5 +1,5 @@
 def merge_sort(array):
-    def merge_arr(arr_l, arr_r):
+    def merge_arr(arr_l, arr_r):        #合并所有项
         array = []
         while len(arr_l) and len(arr_r):
             if arr_l[0] <= arr_r[0]:
@@ -12,7 +12,7 @@ def merge_sort(array):
             array += arr_r
         return array
  
-    def recursive(array):
+    def recursive(array):   #划分开，直到分到单个元素为一项
         if len(array) == 1:
             return array
         mid = len(array) // 2
