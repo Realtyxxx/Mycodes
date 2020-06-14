@@ -7,9 +7,9 @@ x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
 ### CLASSIC DOT PRODUCT OF VECTORS IMPLEMENTATION ###
 tic = time.process_time()
 dot = 0
-# r=0
-# for i in range(10000000):
-#     r += i
+r=0
+for i in range(10000000):
+    r += i
 for i in range(len(x1)):
     dot+= x1[i]*x2[i]
 toc = time.process_time()
