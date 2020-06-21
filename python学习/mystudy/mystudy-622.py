@@ -4,3 +4,5 @@ planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', '
 
 for planet in planets:
     print(planet, end=' ') # 在同一行显示全部行星的名字，以空格做间隔
+
+#Git: warning: Pulling without specifying how to reconcile divergent branches is
