@@ -41,3 +41,38 @@ year,month,day=datestr.split('-')
 print(year)
 print(month)
 print(day)
+print('-'*40)
+print('😁'.join([month,day,year]))
+print('-'*40)
+position = 9
+print(planet + ", you'll always be the " + str(position) + "th planet to me.")
+print('{0}, you\'ll always be the {1}th planet to me.'.format(planet,position))
+print('-'*40)
+pluto_mass = 1.303 * (10**22)
+earth_mass = 5.9722 * (10**24)
+population = 52910390
+
+print("{} weighs about {:.2} kilograms ({:.3%} of Earth's mass). It is home to {:,} Plutonians.".format(planet, pluto_mass, pluto_mass / earth_mass, population,))
+print('-'*40)
+print('-'*40)
+
+print('-'*40)
+
+import math
+
+print("It's math! It has type {}".format(type(math)))
+print(dir(math))
+print(math.pi)
+print("pi to 4 significant digits = {:.4}".format(math.pi))
+print(math.log(32,2))
+# help(math)
+
+from math import log,pi
+from numpy import asarray
+print(log(32,2))
+import numpy
+
+print("numpy.random is a", type(numpy.random))
+print("it contains names such as...",
+      dir(numpy.random)[-25:-20]
+     )
