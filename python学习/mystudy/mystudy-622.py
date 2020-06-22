@@ -73,6 +73,10 @@ print(log(32,2))
 import numpy
 
 print("numpy.random is a", type(numpy.random))
-print("it contains names such as...",
-      dir(numpy.random)[-25:-20]
-     )
+print("it contains names such as...",dir(numpy.random)[-25:-20])
+print('-'*40)
+import numpy
+rolls = numpy.random.randint(low=1, high=6, size=10)
+
+print(rolls)
+print(type(rolls))
