@@ -80,3 +80,34 @@ rolls = numpy.random.randint(low=1, high=6, size=10)
 
 print(rolls)
 print(type(rolls))
+ 
+ #如何了解一个库
+
+print(type(rolls))
+print(dir(rolls))
+print(rolls.mean())
+print(rolls.tolist())
+# help(rolls.mean)
+# help(rolls.tolist)
+
+# 在随机掷十次骰子的情况下，哪几次掷出的数字是小于或者等于3的？
+
+print(rolls <= 3)
+xlist = [[1,2,3],[2,4,6]]
+xarray = numpy.asarray(xlist)
+
+#还记得在print()里的参数如何换行吗？
+
+print("list = {}\narray =\n{}".format(xlist, xarray))
+
+print(xarray[1,-1])
+# print(xlist[1,-1])
+
+import tensorflow as tf
+
+# 创建两个为1的常数值
+a = tf.constant(1)
+b = tf.constant(1)
+
+# 把它们相加
+print(a + b)
