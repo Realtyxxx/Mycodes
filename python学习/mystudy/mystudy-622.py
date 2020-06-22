@@ -28,3 +28,16 @@ print(my_planets)
 print('-'*40)
 print([32 for planet in planets])
 print('-'*40)
+
+planet = 'Pluto'
+claim='Pluto is a planet'
+print(claim.startswith(planet))
+words=claim.split()
+print(words)
+print('-'*40)
+
+datestr='2020-6-22'
+year,month,day=datestr.split('-')
+print(year)
+print(month)
+print(day)
