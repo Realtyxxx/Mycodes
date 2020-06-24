@@ -89,10 +89,10 @@ first_name,last_name = name.split()
 print(first_name,last_name)
 print('----------------分隔符-------------------------------')
 print('----------------With Statement----------------------')
-# f=open("hello.txt","r")
+# f=open("/Users/realtyxxx_mac/代码study/GitHub/Mycodes/python学习/SortAlgorithmPython/hello.txt","r")
 # s=f.read()
 # print(s)
 # f.close()
-with open("hello.txt","r") as f:
+with open("/Users/realtyxxx_mac/代码study/GitHub/Mycodes/python学习/SortAlgorithmPython/hello.txt","r") as f:
     s=f.read()
     print(s)
