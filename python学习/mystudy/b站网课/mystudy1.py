@@ -1,3 +1,5 @@
+import functools
+from collections.abc import Iterable
 dictA = {'pro': 'student', 'school': 'hunan university'}
 dictA['name'] = 'realtyxxx'
 dictA['age'] = 23
@@ -69,7 +71,6 @@ print(sorted(dictA.items(), key=lambda d: d[1]))
 # nums1=(0,1,2,3,4)
 # calc(*nums)
 # calc(*nums1)
-from collections.abc import Iterable
 print(isinstance('abc', Iterable))
 print(isinstance((x for x in range(10)), Iterable))
 
@@ -99,7 +100,7 @@ def odd():
 
 o = odd()
 for i in range(3):
-    print(next(o))  #可以被next()函数调用并不断返回下一个之的对象：迭代器
+    print(next(o))  # 可以被next()函数调用并不断返回下一个之的对象：迭代器
 print('-----------------------------------')
 for n in fib(6):
     print(n)
@@ -122,10 +123,13 @@ def count(n):
 
 print(count(5))
 print('--------------匿名函数-------------')
-sum = lambda x, y: x + y
+
+
+def sum(x, y): return x + y
+
+
 print(sum(15, 60))
 print('-------------偏函数----------------')
-import functools
 max2 = functools.partial(max, 10)
 ans = max2(6, 7, 8, 9)
 print(ans)
