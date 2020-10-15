@@ -16,6 +16,7 @@ int trap(vector<int> &height)
             ++left;
         }else{
             height[right]>rightmax ? (rightmax=height[right]) :ans+=(rightmax-height[right]);
+            --right;
         }
     }
     return ans;
