@@ -1,3 +1,4 @@
+// 双指针法
 #include<iostream>
 #include<vector>
 
