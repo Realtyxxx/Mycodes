@@ -1,3 +1,4 @@
+#pragma G++ diagnostic error "-std=c++11"
 #include<bits/stdc++.h>
 using namespace std;
 
