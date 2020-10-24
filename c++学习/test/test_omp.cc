@@ -13,5 +13,6 @@ int main (int argc, char *argv[]) {
   {
     th_id = omp_get_thread_num();
     printf("Hello World from thread %d\n", th_id);
-    return 0;
   }
+    return 0;
+ }
