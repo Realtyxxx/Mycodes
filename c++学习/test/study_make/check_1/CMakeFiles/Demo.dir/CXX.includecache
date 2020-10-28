@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_make/main.cc
+stdio.h
+-
+stdlib.h
+-
+
