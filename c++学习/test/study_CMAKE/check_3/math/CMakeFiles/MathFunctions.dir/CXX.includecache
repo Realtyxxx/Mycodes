@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/math/MathFunctions.cc
+MathFunctions.h
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/math/MathFunctions.h
+
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/math/MathFunctions.h
+stdio.h
+-
+stdlib.h
+-
+

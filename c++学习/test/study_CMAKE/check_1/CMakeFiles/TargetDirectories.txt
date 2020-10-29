@@ -1,0 +1,3 @@
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_make/check_1/CMakeFiles/rebuild_cache.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_make/check_1/CMakeFiles/edit_cache.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_make/check_1/CMakeFiles/Demo.dir

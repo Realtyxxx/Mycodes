@@ -1,0 +1,6 @@
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/CMakeFiles/rebuild_cache.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/CMakeFiles/edit_cache.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/CMakeFiles/Demo.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/math/CMakeFiles/rebuild_cache.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/math/CMakeFiles/edit_cache.dir
+/Users/realtyxxx_mac/Desktop/Mycodes/c++学习/test/study_CMAKE/check_3/math/CMakeFiles/MathFunctions.dir
