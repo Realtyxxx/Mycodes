@@ -28,8 +28,8 @@ void QuickSort(int A[], int low, int high) {
 int main() {
   int a[] = {34, 123, 5432, 1234, 132, 54, 67, 5, 324, 124};
   int count = 0;
-  for (auto item1 : a) count++;
-  QuickSort(a, 0, count);
-  for (auto item2 : a) cout<<item2<<" ";
+  for (auto item : a) count++;
+  QuickSort(a, 0, count); 
+  for (auto item : a) cout<<item<<" ";
   return 0;
 }
