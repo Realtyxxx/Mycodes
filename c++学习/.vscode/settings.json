@@ -1,6 +1,8 @@
 {
     "files.associations": {
+        "*.S": "arm",
         "iosfwd": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "vector": "cpp"
     }
 }
