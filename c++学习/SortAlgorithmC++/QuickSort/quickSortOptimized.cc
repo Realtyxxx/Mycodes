@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include "../head.h" 
 using namespace std;
 
 int Partition(int A[], int low, int high) {
@@ -32,4 +32,5 @@ int main() {
   QuickSort(a, 0, count); 
   for (auto item : a) cout<<item<<" ";
   return 0;
+  
 }
