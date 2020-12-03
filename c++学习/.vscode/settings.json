@@ -3,6 +3,7 @@
         "*.S": "arm",
         "iosfwd": "cpp",
         "stack": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "cstdint": "cpp"
     }
 }
