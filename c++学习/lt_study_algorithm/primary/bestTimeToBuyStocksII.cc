@@ -48,9 +48,10 @@ class Solution {
  public:
   int maxProfit(vector<int>& prices) {
     int l = prices.size();
+    if (l == 0) return 0;
     int buy = prices[0], profit = 0;
     bool bought = false;
-    int i = 1;
+    int i = 0;
     while (i < l) {
       if (!bought) {
         if (i < l - 1 && prices[i + 1] > prices[i]) {
@@ -59,14 +60,21 @@ class Solution {
         }
       }
       if (bought) {
-        if (prices[i] > buy && i < l - 1 && prices[i + 1] < prices[i]) {
+        if ((prices[i] > buy && i < l - 1 && prices[i + 1] < prices[i]) ||
+            i == l - 1) {
           profit += int(prices[i] - buy);
           bought = false;
         }
       }
+      cout << bought << "  " << prices[i] << "  " << i << "  " << profit
+           << endl;
       i++;
-      cout<< bought<<"  "<<prices[i]<<endl;
     }
     return profit;
   }
 };
+
+// [1,2,3,4,5]
+// [7,2,65,3,6,7,3,5,7,234,6]
+// []
+// [5,3,2,1]
