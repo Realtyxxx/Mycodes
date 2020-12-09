@@ -6,6 +6,7 @@ int main() {
   std::vector<int> myvector(5);
 
   int *p = myvector.data();
+  std::cout << *p << std::endl;
 
   *p = 10;
   ++p;
