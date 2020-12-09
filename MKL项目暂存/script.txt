@@ -1,0 +1,5 @@
+source mklvars.sh intel64
+
+-lmkl_rt
+
+clang-format -i *.cpp
