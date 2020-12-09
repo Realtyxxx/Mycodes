@@ -21,9 +21,19 @@ int main(int argc, char **argv) {
   n_value = atoi(argv[3]);    //命令行输入统一的 n_value
   k_value = atoi(argv[4]);    //命令行输入统一的 k_value
 
-  MKL_INT m[GRP_COUNT] = {20};
-  MKL_INT k[GRP_COUNT] = {10};
-  MKL_INT n[GRP_COUNT] = {20};
+  // 给m.n.,k赋值
+  MKL_INT m[GRP_COUNT];
+  MKL_INT k[GRP_COUNT];
+  MKL_INT n[GRP_COUNT];
+  for(int i = 0; i < GRP_COUNT-1;++i){
+    m[i]=m_value;
+    n[i]=n_value;
+    k[i]=k_value;
+  }
+
+  // MKL_INT m[GRP_COUNT] = {20};
+  // MKL_INT k[GRP_COUNT] = {10};
+  // MKL_INT n[GRP_COUNT] = {20};
 
   MKL_INT lda[GRP_COUNT] = {40};
   MKL_INT ldb[GRP_COUNT] = {40};
