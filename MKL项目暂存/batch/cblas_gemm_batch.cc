@@ -10,30 +10,11 @@ int main(int argc, char **argv) {
   std::vector<float> b(raw_rows * raw_cols, 1.0);
   std::vector<float> c(1600, 0.0);
 
-  // #define GRP_COUNT 1;
-  MKL_INT GRP_COUNT;
-  MKL_INT m_value;
-  MKL_INT n_value;
-  MKL_INT k_value;
+  #define GRP_COUNT 1
 
-  GRP_COUNT = atoi(argv[1]);  //命令行输入groupcount
-  m_value = atoi(argv[2]);    //命令行输入统一的 m_value
-  n_value = atoi(argv[3]);    //命令行输入统一的 n_value
-  k_value = atoi(argv[4]);    //命令行输入统一的 k_value
-
-  // 给m.n.,k赋值
-  MKL_INT m[GRP_COUNT];
-  MKL_INT k[GRP_COUNT];
-  MKL_INT n[GRP_COUNT];
-  for(int i = 0; i < GRP_COUNT-1;++i){
-    m[i]=m_value;
-    n[i]=n_value;
-    k[i]=k_value;
-  }
-
-  // MKL_INT m[GRP_COUNT] = {20};
-  // MKL_INT k[GRP_COUNT] = {10};
-  // MKL_INT n[GRP_COUNT] = {20};
+  MKL_INT m[GRP_COUNT] = {20};
+  MKL_INT k[GRP_COUNT] = {10};
+  MKL_INT n[GRP_COUNT] = {20};
 
   MKL_INT lda[GRP_COUNT] = {40};
   MKL_INT ldb[GRP_COUNT] = {40};
@@ -57,17 +38,16 @@ int main(int argc, char **argv) {
 
   double s_initial, s_elapsed;  //时间
 
-  s_initial = dsecnd();  // mkl.fi文件中的  second() / dsecnd()(double
-                         // precision)   Elapsed realtime seconds
+  s_initial = dsecnd();
 
-  cblas_sgemm_batch(CblasRowMajor, transA, transB, m, n, k, alpha, a_array, lda,
-                    b_array, ldb, beta, c_array, ldc, GRP_COUNT, size_per_grp);
+  cblas_sgemm_batch(CblasRowMajor, transA, transB,  // m,n,k 命令行输入
+                    m, n, k, alpha, a_array, lda, b_array, ldb, beta, c_array,
+                    ldc, GRP_COUNT, size_per_grp);
 
   s_elapsed = dsecnd() - s_initial;
 
   printf(
-      " == Matrix multiplication using Intel(R) MKL cblas_sgemm_batch "
-      "completed == \n"
+      " == Matrix multiplication using Intel(R) MKL dgemm completed == \n"
       " == at %.5f milliseconds == \n\n",
       (s_elapsed * 1000));
 
