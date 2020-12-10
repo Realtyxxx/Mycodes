@@ -34,12 +34,51 @@
 // 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
+#include <map>
 using namespace std;
 
 class Solution {
-public:
-    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+ public:
+  vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+    int l1 = nums1.size(), l2 = nums2.size();
+    if (l1 == 0 || l2 == 0) return {};
 
+    sort(nums1.begin(), nums1.end());
+    sort(nums2.begin(), nums2.end());
+
+    vector<int> ans;
+
+    int left = 0;
+
+    for (int i = 0; i < l1; ++i) {
+      int refer = nums1[i], count1 = 1;
+      while (i < l1 - 1 && nums1[i] == nums1[i + 1]) {
+        i++;
+        count1++;
+      }
+      for (; left < l2;) {
+        if (nums2[left] > refer)
+          break;
+
+        else if (nums2[left] < refer && left < l2) {
+          ++left;
+          continue;
+        }
+
+        int count2 = 0;
+        while (left < l2 && nums2[left] == refer) {
+          left++;
+          count2++;
+        }
+        int count = min(count1, count2);
+        while (count--) {
+          ans.push_back(refer);
+        }
+        
+      }
     }
+    return ans;
+  }
 };
