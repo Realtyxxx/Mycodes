@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.S": "arm",
+    "__functional_03": "c",
+    "fstream": "c",
+    "functional": "c",
+    "locale": "c",
+    "random": "c"
+  }
+}
