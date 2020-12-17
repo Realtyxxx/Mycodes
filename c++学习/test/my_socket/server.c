@@ -1,12 +1,3 @@
-// #include <arpa/inet.h>   //提供IP地址转换函数,inet_pton()
-// #include <errno.h>       //提供错误号errno的定义，用于错误处理
-// #include <netinet/in.h>  //定义数据结构sockaddr_in
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <sys/socket.h>  //提供socket函数及数据结构
-// #include <sys/types.h>   //数据类型定义
-// #include <unistd.h>  //提供通用的文件、目录、程序及进程操作的函数,close()
 #include "head.hpp"
 #define MAXLINE 4096
 
