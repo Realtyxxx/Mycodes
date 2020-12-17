@@ -1,3 +1,4 @@
+#include <arpa/inet.h>
 #include <errno.h>
 #include <netinet/in.h>
 #include <stdio.h>
@@ -5,6 +6,7 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <unistd.h>
 #define MAXLINE 4096
 
 int main(int argc, char* argv[]) {
@@ -16,8 +18,7 @@ int main(int argc, char* argv[]) {
     printf("create socket error: %s(errno : %d)\n", strerror(errno), errno);
     exit(0);
   }
-  memset(&servaddr, 0, sizeof(servaddr));
-  servaddr.sin_family = AF_INET;
+  memset(&servaddr, 0, sizeof(servaddr)); servaddr.sin_family = AF_INET;
   servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
   servaddr.sin_port = htons(8080);
   if (bind(listenfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) == -1) {

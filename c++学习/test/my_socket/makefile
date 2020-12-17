@@ -1,6 +1,6 @@
 install:
-	gcc server.c -o server
-	gcc client.c -o client
+	gcc server.c -o server  
+	gcc client.c -o client 
 clean:
 	rm -rf client
 	rm -rf server
