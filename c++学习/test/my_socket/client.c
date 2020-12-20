@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
     printf("Usage: ./client <ipaddress>\n");
     exit(0);
   }
-  if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {  //创建套接字
+  if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {  //创建套接字  Af_INET 指定IPv4，SOCK_STREAM指定TCP
     printf("create socket error: %s(errno : %d)\n", strerror(errno), errno);
     exit(0);
   }
