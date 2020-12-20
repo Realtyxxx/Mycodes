@@ -3,5 +3,7 @@
         "cmath": "cpp",
         "complex": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "python.formatting.provider": "autopep8",
+    "python.pythonPath": "/opt/anaconda3/bin/python"
 }

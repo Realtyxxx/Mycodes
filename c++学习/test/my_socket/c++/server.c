@@ -4,6 +4,13 @@
 int main(int argc, char* argv[]) {
   int listenfd, connfd;
   struct sockaddr_in servaddr;
+  //   struct sockaddr_in {
+  // 	__uint8_t       sin_len;      //
+  // 	sa_family_t     sin_family;   //定义是哪种地址族
+  // 	in_port_t       sin_port;     //保存端口号
+  // 	struct  in_addr sin_addr;     //保存IP地址信息
+  // 	char            sin_zero[8];  //没有特殊含义
+  // };
   char buff[MAXLINE];
   int n;
   if ((listenfd = socket(AF_INET, SOCK_STREAM, 0)) ==
@@ -28,7 +35,8 @@ int main(int argc, char* argv[]) {
   }
   printf("========waiting for client's request========\n");
 
-  if ((connfd = accept(listenfd, (struct sockaddr*)NULL, NULL)) == -1) {    //file descriptor,返回了文件描述符 
+  if ((connfd = accept(listenfd, (struct sockaddr*)NULL, NULL)) ==
+      -1) {  // file descriptor,返回了文件描述符(connect file descriptor)
     printf("accept socket error: %s\n", strerror(errno), errno);
     exit(0);
   }
