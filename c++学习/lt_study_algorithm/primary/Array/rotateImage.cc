@@ -4,7 +4,6 @@
 // 跳过即视为本节
 // 已完成
 
-
 // 跳过
 
 // 重新做题
@@ -18,7 +17,7 @@
 
 // 示例 1:
 
-// 给定 matrix = 
+// 给定 matrix =
 // [
 //   [1,2,3],
 //   [4,5,6],
@@ -39,7 +38,7 @@
 //   [ 2, 4, 8,10],
 //   [13, 3, 6, 7],
 //   [15,14,12,16]
-// ], 
+// ],
 
 // 原地旋转输入矩阵，使其变为:
 // [
@@ -49,8 +48,28 @@
 //   [16, 7,10,11]
 // ]
 
-
 // 作者：力扣 (LeetCode)
 // 链接：https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xnhhkv/
 // 来源：力扣（LeetCode）
 // 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+ public:
+  void rotate(vector<vector<int>>& matrix) {
+    int m = matrix.size();
+    int n = matrix[0].size();
+    for (int i = 0; i < m / 2; i++) {
+      for (int j = 0; j < (n + 1) / 2; j++) {
+        int temp = matrix[i][j];
+        matrix[i][j] = matrix[m - j - 1][i];
+        matrix[m - j - 1][i] = matrix[m - i - 1][n - j - 1];
+        matrix[m - i - 1][n - j - 1] = matrix[j][n - i - 1];
+        matrix[j][n - i - 1] = temp;
+      }
+    }
+  }
+};
