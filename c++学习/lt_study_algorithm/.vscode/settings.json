@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"*.S": "arm",
+		"iosfwd": "cpp"
+	}
+}
