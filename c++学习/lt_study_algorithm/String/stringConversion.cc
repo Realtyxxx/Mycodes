@@ -22,18 +22,23 @@ class Solution {
       if (s[i] == '-') sign = false;
     }
     for (int j = i + 1; j < s.size() && isNume(s[j]); j++) {
-        ans += ans * 10 + int(s[j] - '0');
+      ans = ans * 10 + int(s[j] - '0');
+      if (ans > 2147483648) break;
     }
-    if(ans > INT_MAX)  return INT_MAX;
-    if(ans < INT_MIN)  return INT_MIN;
-    return ans;
+    if (ans > INT_MAX) {
+      if (sign) return INT_MAX;
+      if (-ans < INT_MIN) {
+        if (!sign) return INT_MIN;
+      }
+    }
+    return sign ? ans : -ans;
   }
 };
 
-int main(){
-	string s;
-  cin>>s;
+int main() {
+  string s;
+  cin >> s;
   Solution myans;
-  cout << myans.myAtoi(s)<<endl;
+  cout << myans.myAtoi(s) << endl;
   return 0;
 }
