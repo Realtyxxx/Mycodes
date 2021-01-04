@@ -8,7 +8,7 @@ import  hashlib
  
 def has_valid_license():
     l = []
-    email = "841344563@qq.com"
+    email = "tyx627@icloud.com"
     # 这个email 可以自己进行自定义
     hash_object = hashlib.md5(email.encode('utf-8'))
     hex_digest = hash_object.hexdigest()
@@ -20,13 +20,14 @@ def has_valid_license():
             pass
         license_key = '-'.join(l)
     print("激活码license_key为：{0}".format(license_key))
+# "email": "id@chinapyg.com"
     license = """
 {
- "email": "id@chinapyg.com",
+ "email": "841344563@qq.com",
  "license_key": "10988-becc3-31e35-87fda-a0059"
 }
 只需要修改相应的key和email就好，默认为上面的激活码~
     """
-    print(license)
+    # print(license)
  
 has_valid_license()
