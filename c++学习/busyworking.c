@@ -42,3 +42,7 @@ int main() {
     puts("All pthreads finished.");
     return 0;
 }
+
+/*
+gcc -pthread busyworking.c -o busyworking  
+/*
