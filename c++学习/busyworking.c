@@ -45,4 +45,4 @@ int main() {
 
 /*
 gcc -pthread busyworking.c -o busyworking  
-/*
+*/
