@@ -38,7 +38,7 @@ struct ListNode {
 class Solution {
  public:
   ListNode* reverseList(ListNode* head) {
-    if (head == NULL || head->next == NULL) return head;
+/*     if (head == NULL || head->next == NULL) return head;
     stack<ListNode*> myst;
     while (head != NULL) {
       myst.push(head);
@@ -55,7 +55,16 @@ class Solution {
     }
     head = ans->next;
     delete ans;
-    return head;
+    return head; */
+    ListNode* prev = nullptr;
+    ListNode* curr = head;
+    while (curr) {
+      ListNode* next = curr -> next;
+      curr->next = prev;
+      prev = curr;
+      curr = next;
+    }
+    return prev;
   }
 };
 
