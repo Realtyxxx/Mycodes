@@ -38,39 +38,40 @@ struct ListNode {
 class Solution {
  public:
   ListNode* reverseList(ListNode* head) {
-/*     if (head == NULL || head->next == NULL) return head;
-    stack<ListNode*> myst;
-    while (head != NULL) {
-      myst.push(head);
-      head = head->next;
-    }
-    ListNode* ans = new ListNode(0);
-    ListNode* temp;
-    ans->next = myst.top();
-
-    myst.pop();
-    while (!myst.empty()) {
-      temp->next = myst.top();
-      myst.pop();
-    }
-    head = ans->next;
-    delete ans;
-    return head; */
     ListNode* prev = nullptr;
     ListNode* curr = head;
-    while (curr) {
-      ListNode* next = curr -> next;
+    while(curr) {
+      ListNode* next = curr->next;
       curr->next = prev;
       prev = curr;
       curr = next;
     }
-    return prev;
+    return head;
   }
 };
 
 int main() {
+  srand(time(NULL));
   ListNode* head;
-  head->next = new ListNode(0);
-  delete head->next;
+  ListNode* curr = head;
+  int n;
+  cin >> n;
+  for(int i = 0; i < n; i++) {
+    int x = rand()%101;
+    curr -> next = new ListNode(x);
+    curr = curr->next;
+  }
+  curr =head;
+  for(int i = 0; i < n; i++) {
+    cout << curr->val;
+    curr = curr->next;
+  }
+  Solution myans;
+  myans.reverseList(head);
+  curr =head;
+  for(int i = 0; i < n; i++) {
+    cout << curr->val;
+    curr = curr->next;
+  }
   return 0;
 }
