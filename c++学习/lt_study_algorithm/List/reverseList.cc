@@ -40,38 +40,46 @@ class Solution {
   ListNode* reverseList(ListNode* head) {
     ListNode* prev = nullptr;
     ListNode* curr = head;
-    while(curr) {
+    while (curr) {
       ListNode* next = curr->next;
       curr->next = prev;
       prev = curr;
       curr = next;
     }
-    return head;
+    return prev;
   }
 };
 
 int main() {
   srand(time(NULL));
-  ListNode* head;
+
+  ListNode* head = new ListNode(0);
   ListNode* curr = head;
+
+  // initialize;
   int n;
   cin >> n;
-  for(int i = 0; i < n; i++) {
-    int x = rand()%101;
-    curr -> next = new ListNode(x);
+  for (int i = 0; i < n; i++) {
+    int x = int(rand() % 101);
+    curr->next = new ListNode(x);
     curr = curr->next;
   }
-  curr =head;
-  for(int i = 0; i < n; i++) {
-    cout << curr->val;
+
+  curr = head->next;
+  for (int i = 0; i < n; i++) {
+    cout << curr->val << " ";
     curr = curr->next;
   }
-  Solution myans;
-  myans.reverseList(head);
-  curr =head;
-  for(int i = 0; i < n; i++) {
-    cout << curr->val;
+  cout << endl;
+  
+  Solution myAns;
+
+  curr = myAns.reverseList(head);
+
+  for (int i = 0; i < n; i++) {
+    cout << curr->val << " ";
     curr = curr->next;
   }
+
   return 0;
 }
