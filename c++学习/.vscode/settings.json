@@ -5,6 +5,7 @@
         "stack": "cpp",
         "vector": "cpp",
         "cstdint": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "iterator": "cpp"
     }
 }
