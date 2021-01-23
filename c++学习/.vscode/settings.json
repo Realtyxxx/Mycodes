@@ -6,6 +6,9 @@
         "vector": "cpp",
         "cstdint": "cpp",
         "new": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "set": "cpp",
+        "__hash_table": "cpp",
+        "unordered_map": "cpp"
     }
 }
