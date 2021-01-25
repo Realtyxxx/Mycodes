@@ -9,6 +9,7 @@
         "iterator": "cpp",
         "set": "cpp",
         "__hash_table": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "ios": "cpp"
     }
 }
