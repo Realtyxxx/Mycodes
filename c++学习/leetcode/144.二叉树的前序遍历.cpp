@@ -85,25 +85,45 @@
 
 class Solution {
  public:
-  /*
-   vector<int> result; 
-   void preorder(TreeNode* root) {
-     if (root == nullptr) return;
-     result.push_back(root->val);
-     preorder(root->left);
-     preorder(root->right);
-     return;
-   }
-   vector<int> preorderTraversal(TreeNode* root) {
-     preorder(root);
-     return result;
-   } */
+  vector<int> result;
+  // recursion
+  void preorder(TreeNode* root) {
+    if (root == nullptr) return;
+    result.push_back(root->val);
+    preorder(root->left);
+    preorder(root->right);
+    return;
+  }
   vector<int> preorderTraversal(TreeNode* root) {
-    vector<int> result;
+    preorder(root);
+    return result;
+  }
+
+  // iteration
+  vector<int> preorderTraversal(TreeNode* root) {
+    if (root == nullptr) {
+      return result;
+    }
+    stack<TreeNode*> stk;
+    TreeNode* node = root;
+    while (!stk.empty() || node != nullptr) {
+      while (node != nullptr) {
+        result.emplace_back(node->val);
+        stk.emplace(node);
+        node = node->left;
+      }
+      node = stk.top();
+      stk.pop();
+      node = node->right;
+    }
+    return result;
+  }
+
+  // morris‘god-lever traversal!!!!
+  vector<int> preorderTraversal(TreeNode* root) {
     if (root == nullptr) return result;
 
     TreeNode *cur = root, *mostRight = nullptr;
-
 
     while (cur != nullptr) {
       mostRight = cur->left;
@@ -112,17 +132,20 @@ class Solution {
           mostRight = mostRight->right;
         }
         if (mostRight->right == nullptr) {
-            result.push_back(cur->val);
-            mostRight->right = cur;
-            cur = cur->left;
-            continue;
+          result.emplace_back(cur->val);
+          mostRight->right = cur;
+          cur = cur->left;
+          continue;
         } else {
-            result.push_back(cur->val);
+          mostRight->right = nullptr;
         }
-        cur = cur->right;
+      } else {
+        result.emplace_back(cur->val);
       }
+      cur = cur->right;
     }
     return result;
   }
 };
+
 // @lc code=end
