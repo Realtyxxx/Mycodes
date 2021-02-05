@@ -47,11 +47,12 @@
  * right(right) {}
  * };
  */
+//-std=c++11
 #include "mytree.hpp"
 // #include <unordered_map>  //use unordered_map as hashset
 using namespace std;
 
-class Solution {
+class Solution1 {
   int post_idx;
   unordered_map<int, int> idx_map;
 
@@ -86,6 +87,38 @@ class Solution {
       idx_map[val] = idx++;
     }
     return helper(0, (int)inorder.size() - 1, inorder, postorder);
+  }
+};
+
+class Solution {
+ public:
+  TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+    if (postorder.size() == 0) return nullptr;
+    auto root = new TreeNode(postorder.back());
+    auto s = stack<TreeNode*>();
+    s.push(root);
+    int inorderIndex = inorder.size() - 1;
+    //后序遍历每次压栈直接成为右儿子，中序遍历对比栈中顶部元素，，（先对比处理，再压栈）
+    for (int i = int(postorder.size()) - 2; i >= 0; --i) {
+      //定义节点和当前插入值，
+      int postorderVal = postorder[i];
+      auto node = s.top();
+
+      if (node->val != inorder[inorderIndex]) {
+        node->right = new TreeNode(postorderVal);
+        s.push(node->right);
+      }
+      else {
+        while (!s.empty() && s.top()->val == inorder[inorderIndex]) {
+          node = s.top();
+          s.pop();
+          inorderIndex--;
+        }
+        node->left = new TreeNode(postorderVal);
+        s.push(node->left);
+      } 
+    }
+    return root;
   }
 };
 // @lc code=end
