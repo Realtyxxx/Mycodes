@@ -8,6 +8,7 @@
 		"deque": "cpp",
 		"list": "cpp",
 		"ios": "cpp",
-		"valarray": "cpp"
+		"valarray": "cpp",
+		"iostream": "cpp"
 	}
 }
