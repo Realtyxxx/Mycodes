@@ -61,9 +61,13 @@
  * };
  */
 #include <iostream>
+#include <stack>
+
+// #include "mytree.hpp"
+
 using namespace std;
 
-struct TreeNode {
+/* struct TreeNode {
   int val;
   TreeNode *left;
   TreeNode *right;
@@ -71,11 +75,28 @@ struct TreeNode {
   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
   TreeNode(int x, TreeNode *left, TreeNode *right)
       : val(x), left(left), right(right) {}
-};
+}; */
+typedef long long ll;
 class Solution {
  public:
   bool isValidBST(TreeNode *root) {
-    
+    stack<TreeNode *> stack;
+    ll inorder = (ll)INT_MIN - 1;
+
+    while (!stack.empty() || root != nullptr) {
+      while (root != nullptr) {
+        stack.push(root);
+        root = root->left;
+      }
+      root = stack.top();
+      stack.pop();
+      if (root->val <= inorder) {
+        return false;
+      }
+      inorder = root->val;
+      root = root->right;
+    }
+    return true;
   }
 };
 // @lc code=end
