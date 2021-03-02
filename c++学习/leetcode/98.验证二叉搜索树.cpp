@@ -81,7 +81,7 @@ class Solution {
  public:
   bool isValidBST(TreeNode *root) {
     stack<TreeNode *> stack;
-    ll inorder = (ll)INT_MIN - 1;
+    ll inorder = (ll) INT_MIN - 1;
 
     while (!stack.empty() || root != nullptr) {
       while (root != nullptr) {

@@ -3,3 +3,13 @@
 
 install:
 	gcc src/main.c -I include/ -L lib/ -l test -o math.out
+
+# .
+# |____makefile
+# |____include
+# | |____test.h
+# |____lib
+# | |____libtest.a
+# |____math.out
+# |____src
+# | |____main.c
