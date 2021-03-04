@@ -26,6 +26,6 @@ clean:
 
 # "gcc -S -fverbose-asm " let you know more about what's in the ".s" file
 
-# "gcc -E would preprocess the code with -C it could output .i file"
+# "gcc -E would preprocess the code with -C it could output .i file, like gcc -E -C hello.c -o hello.i"
 
 # "gcc -c would compile and assemble the specified source file, but do not link."
