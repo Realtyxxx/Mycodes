@@ -2036,9 +2036,8 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)
 
 # 2 "hello.c" 2
 
-
-# 3 "hello.c"
+# 2 "hello.c"
 int main(){
- printf("Hello World!.\n");
+ printf("%s","Hello, World!\n");
  return 0;
 }

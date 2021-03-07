@@ -37,7 +37,7 @@
 	.text
 	.section	.rodata
 .LC0:
-	.string	"Hello World!."
+	.string	"Hello, World!"
 	.text
 	.globl	main
 	.type	main, @function
@@ -49,12 +49,12 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp	#,
 	.cfi_def_cfa_register 6
-# hello.c:4: 	printf("Hello World!.\n");
+# hello.c:3: 	printf("%s","Hello, World!\n");
 	movl	$.LC0, %edi	#,
 	call	puts	#
-# hello.c:5: 	return 0;
+# hello.c:4: 	return 0;
 	movl	$0, %eax	#, _3
-# hello.c:6: }
+# hello.c:5: }
 	popq	%rbp	#
 	.cfi_def_cfa 7, 8
 	ret	
