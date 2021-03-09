@@ -1,0 +1,14 @@
+http://www.cplusplus.com/reference/utility/pair/
+
+(constructor)
+pair::operator=
+pair::swap
+
+swap
+get
+
+tuple_element<pair>
+tuple_size<pair>
+
+make_pair
+piecewise_construct
