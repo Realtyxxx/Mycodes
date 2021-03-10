@@ -9,4 +9,7 @@ all:
 	ls
 
 clean:
-	rm hello.i hello.s hello.o hello
+	-rm  -rf hello.i hello.s hello.o hello hello.bc a.out hello.dYSM
+
+show_temps:
+	gcc -save-temps hello.c
