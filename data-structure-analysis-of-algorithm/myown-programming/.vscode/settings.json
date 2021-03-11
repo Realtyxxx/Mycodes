@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"*.S": "arm",
+		"stdio.h": "c"
+	}
+}
