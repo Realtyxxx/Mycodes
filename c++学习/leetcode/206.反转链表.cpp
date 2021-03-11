@@ -34,15 +34,34 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 /* struct ListNode {
   int val;
   ListNode* next;
   ListNode(int x) : val(x), next(NULL) {}
- };
-*/
+};
+ */
+
+//头插法
+class Solution {
+ public:
+  ListNode* reverseList(ListNode* head) {
+    ListNode* now = new ListNode(0);
+    ListNode* prev = new ListNode(0);
+    prev->next = head;
+    while (prev->next) {
+      ListNode* temp = prev->next->next;
+      prev->next->next = now->next;
+      now->next = prev->next;
+      prev->next = temp;
+    }
+    return now->next;
+  }
+};
+//反转指针法
+/* 
 class Solution {
  public:
   ListNode* reverseList(ListNode* head) {
@@ -56,5 +75,5 @@ class Solution {
     }
     return prev;
   }
-};
+}; */
 // @lc code=end
