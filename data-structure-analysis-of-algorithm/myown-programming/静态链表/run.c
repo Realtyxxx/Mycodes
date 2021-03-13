@@ -9,7 +9,7 @@ void reserveArr(component *array) {
     array[i].cur = i + 1;
     array[i].data = 0;
   }
-  array[maxSize - 1].curr = 0;
+  array[maxSize - 1].cur = 0;
 }
 
 //提取分配空间
