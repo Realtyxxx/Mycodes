@@ -21,7 +21,7 @@ int mallocArr(component *array);
 int main() {
   component array[maxSize];
   int body = initArr(array);
-  printf("静态连标： \n");
+  printf("静态链表： \n");
   displayArr(array, body);
   return 0;
 }

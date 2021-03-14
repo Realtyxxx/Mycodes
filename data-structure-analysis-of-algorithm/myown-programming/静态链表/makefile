@@ -1,11 +1,12 @@
 main: run.o staticLinkedList.o
 	gcc -g run.o staticLinkedList.c -o main
+	rm -rf main.dSYM *.gch
 
-run.o: run.c staticLinkedList.h
-	gcc -c run.c staticLinkedList.h
+run.o: run.c 
+	gcc -c run.c 
 
-staticLinkedList.o: staticLinkedList.c staticLinkedList.h
-	gcc -c staticLinkedList.c staticLinkedList.h 
+staticLinkedList.o: staticLinkedList.c 
+	gcc -c staticLinkedList.c 
 
 clean:
-	rm main *.o *.gch
+	rm main *.o 

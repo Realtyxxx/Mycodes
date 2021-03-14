@@ -1,6 +1,11 @@
 // #include "staticLinkedList.h"
-
+#include<stdio.h>
 #define maxSize 6
+
+typedef struct {
+  int data;
+  int cur;
+} component;
 
 //创建备用链表
 void reserveArr(component *array) {
@@ -19,6 +24,7 @@ int mallocArr(component *array) {
   if (array[0].cur) {
     array[0].cur = array[i].cur;
   }
+  return i;
 }
 
 //初始化静态链表
