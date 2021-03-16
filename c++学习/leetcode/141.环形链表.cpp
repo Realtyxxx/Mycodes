@@ -118,4 +118,6 @@ class Solution {
     return true;
   }
 };
+//快慢指针是最快的
+
 // @lc code=end
