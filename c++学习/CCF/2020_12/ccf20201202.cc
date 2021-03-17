@@ -1,26 +1,40 @@
-#include <algorithm>
-#include <iostream>
-#include <set>
-#include <string>
+#include <bits/stdc++.h>
 
-using namespace std;
+typedef struct {
+  int y;
+  int result;
+} student;
+bool comp(const student& a, const student& b) { return a.y < b.y; }
 
-const int N = 1e6 + 100;
-typedef long long ll;
-typedef pair<int, int> pll;
-int n, m, T, a[N];
-pll p[N];
-int res = -1;
-int sum[N];
-set<int> st;
-int _res;
 int main() {
-  cin >> n;
-  for (int i = 1; i <= n; ++i) {
-    int a, b;
-    cin >> a >> b;
-    p[i] = make_pair(a, b);
+  int m;
+  std::cin >> m;
+
+  student* stu = new student[m];
+
+  int cnt[2];
+  int now[2];
+  
+  for (int i = 0; i < m; i++) {
+    std::cin >> stu[i].y >> stu[i].result;
+    cnt[stu[i].result]++;
   }
-  sort(p + 1, p + n + 1);
-  for (int i = 1; i <= n; i++) sum[i] = sum[i - 1] + p[i].second;
-  for (int i = 1; i <= n; i++) }
+
+  std::sort(stu, stu + m, comp);
+
+  int maxOK = 0, maxtheta = 0;
+  for (int i = 0; i < m; ++i) {
+    if (i > 1 && stu[i].y == stu[i - 1].y) {
+      now[stu[i].result]++;
+      continue;
+    }
+    int OK = cnt[1] + now[0] - now[1];
+    if (OK >= maxOK) {
+      maxOK = OK;
+      maxtheta = stu[i].y;
+    }
+    now[stu[i].result]++;
+  }
+  std::cout << maxtheta << std::endl;
+  return 0;
+}
