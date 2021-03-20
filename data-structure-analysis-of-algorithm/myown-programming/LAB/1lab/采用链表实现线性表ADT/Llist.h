@@ -59,7 +59,7 @@ class Llist : public List<E> {
     assert(curr->next != NULL);
     E it = curr->next->element;
     Link<E>* ltemp = curr->next;
-    if (tail = curr->next) tail = curr;
+    if (tail == curr->next) tail = curr;
     curr->next = curr->next->next;
     delete ltemp;
     cnt--;
