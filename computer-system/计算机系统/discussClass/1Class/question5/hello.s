@@ -1,4 +1,8 @@
 	.file	"hello.c"
+<<<<<<< HEAD
+=======
+	.text
+>>>>>>> e3240c20fa5ac3c42155f5c4d877f4338911e198
 	.section	.rodata
 .LC0:
 	.string	"Hello, World!"
@@ -8,6 +12,7 @@
 main:
 .LFB0:
 	.cfi_startproc
+<<<<<<< HEAD
 	leal	4(%esp), %ecx
 	.cfi_def_cfa 1, 0
 	andl	$-16, %esp
@@ -29,6 +34,18 @@ main:
 	.cfi_restore 5
 	leal	-4(%ecx), %esp
 	.cfi_def_cfa 4, 4
+=======
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$.LC0, %edi
+	call	puts
+	movl	$0, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+>>>>>>> e3240c20fa5ac3c42155f5c4d877f4338911e198
 	ret
 	.cfi_endproc
 .LFE0:
