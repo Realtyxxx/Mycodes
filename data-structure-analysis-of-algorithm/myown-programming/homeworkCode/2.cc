@@ -3,7 +3,7 @@
     // assume the list name is mylist ,and it was construct by "list<int>
     // mylist;"
 
-    mylist.moveToStart();
+mylist.moveToStart();
 while (mylist.getvalue() != 15) mylist.next();
 mylist.remove();
 
@@ -20,7 +20,7 @@ void invert(LList<E>&myl) {
     delete it;
   }
   head = insertAt;
-  curr = insertAt;
+  curr = insertAt; 
   while (curr->next != nullptr) curr = curr->next;
   tail = curr;
 }
@@ -30,10 +30,10 @@ void invert(LList<E>&myl) {
 
 4.18 :
 void invert(queue<E> &Q, stack<E> &S) {
-  while (Q.!length()) {
+  while (!Q.length()) {
     S.push(Q.dequeue());
   }
-  while (S.!length()) {
-    S.push(Q.enqueue());
+  while (!S.length()) {
+    Q.enqueue(S.pop());
   }
 }
