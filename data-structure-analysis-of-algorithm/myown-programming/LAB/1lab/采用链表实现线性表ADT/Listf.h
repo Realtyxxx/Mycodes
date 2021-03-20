@@ -21,7 +21,6 @@ class List {
   virtual int length() = 0;
   virtual void moveToPos(int pos) = 0;
   virtual const E& getValue() const = 0;
-
 };
 
 #endif

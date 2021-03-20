@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "Alist.h"
+#include "Llist.h"
 #include "Listf.h"
 
-AList<char> my_list;
+Llist<char> my_list;
 
 int main() {
   int alphabetCount = 0;
