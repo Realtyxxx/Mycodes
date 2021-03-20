@@ -13,7 +13,7 @@ int main() {
   std::string str;
   std::cin >> str;
 
-  for (int i = 0; i < str.size(); i++) {
+  for (int i = 0; i < (int)str.size(); i++) {
     // if (temp != '\0' || temp != '\n') {
     char temp = str[i];
     if ((temp <= 'Z' && temp >= 'A') || (temp >= 'a' && temp <= 'z')) {
