@@ -1,24 +1,21 @@
+#include <bits/stdc++.h>
 #include <algorithm>
 #include <iostream>
-#include <bits/stdc++.h>
 typedef struct {
   int idx;
-  int x;
-  int y;
+  double distance;
 } pos;
 
-int n, px, py;
-
-bool comp(const pos& a, const pos& b) {
-  return ((a.x - px) * (a.x - px) + (a.y - py) * (a.y - py)) <
-         ((b.x - px) * (b.x - px) + (b.y - py) * (b.y - py));
-}
+bool comp(const pos& a, const pos& b) { return a.distance < b.distance; }
 
 int main() {
+  int n, px, py;
   std::cin >> n >> px >> py;
   pos* p = new pos[n];
+  int x, y;
   for (int i = 1; i <= n; ++i) {
-    std::cin >> p[i].x >> p[i].y;
+    std::cin >> x >> y;
+    p[i].distance = double((x - px) * (x - px) + (y - py) * (y - py));
     p[i].idx = i;
   }
 
