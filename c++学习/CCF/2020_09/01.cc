@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <iostream>
-
+#include <bits/stdc++.h>
 typedef struct {
   int idx;
   int x;
@@ -23,11 +23,6 @@ int main() {
   }
 
   std::sort(p + 1, p + n, comp);
-
-  // std::cout << "in my input:" << std::endl;
-  // for (int i = 1; i <= n; ++i) {
-  //   std::cout << p[i].idx << " " << p[i].x << " " << p[i].y << std::endl;
-  // }
 
   for (int i = 1; i <= 3; ++i) {
     std::cout << p[i].idx << std::endl;
