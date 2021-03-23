@@ -8,6 +8,7 @@ int main() {
   fun(a, 5);
   return 0;
 }
+
 void fun(int a[], int n) {
   for (int i = 1; i <= n; ++i) {
     cin >> a[i];
