@@ -80,19 +80,16 @@ typedef long long ll;
 class Solution {
  public:
   bool isValidBST(TreeNode *root) {
-    stack<TreeNode *> stack;
-    ll inorder = (ll) INT_MIN - 1;
-
-    while (!stack.empty() || root != nullptr) {
+    stack<TreeNode *> myst;
+    ll inorder = (ll)INT_MIN - 1;
+    while (!myst.empty() || root != nullptr) {
       while (root != nullptr) {
-        stack.push(root);
+        myst.push(root);
         root = root->left;
       }
-      root = stack.top();
-      stack.pop();
-      if (root->val <= inorder) {
-        return false;
-      }
+      root = myst.top();
+      myst.pop();
+      if (root->val <= inorder) return false;
       inorder = root->val;
       root = root->right;
     }
