@@ -51,48 +51,48 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+// using namespace std;
 // #include "mytree.hpp"
 
-class Solution {
- public:
-  vector<vector<int>> levelOrder(TreeNode* root) {
-    vector<vector<int>> ans;
-    pre(root, 0, ans);
-    return ans;
-  }
-  void pre(TreeNode* root, int depth, vector<vector<int>>& ans) {
-    if(!root) return;
-    if(depth >= ans.size())
-      ans.push_back(vector<int>{});
-    ans[depth].push_back(root->val);
-    pre(root->left, depth + 1, ans);
-    pre(root->right, depth + 1, ans);
-  }
-};
 // class Solution {
 //  public:
 //   vector<vector<int> > levelOrder(TreeNode* root) {
-//     if (!root) return {};
-//     vector<vector<int> > res;
-//     queue<TreeNode*> q;
-//     q.push(root);
-//     // BFS
-//     while (!q.empty()) {
-//       res.push_back({});
-
-//       int num = q.size();
-//       for (int i = 0; i < num; ++i) {
-//         auto node = q.front();
-//         q.pop();
-
-//         res.back().push_back(node->val);
-
-//         if (node->left) q.push(node->left);
-//         if (node->right) q.push(node->right);
-//       }
-//     }
-//     return res;
+//     vector<vector<int> > ans;
+//     pre(root, 0, ans);
+//     return ans;
+//   }
+//   void pre(TreeNode* root, int depth, vector<vector<int> >& ans) {
+//     if (!root) return;
+//     if (depth >= ans.size()) ans.push_back(vector<int>{});
+//     ans[depth].push_back(root->val);
+//     pre(root->left, depth + 1, ans);
+//     pre(root->right, depth + 1, ans);
 //   }
 // };
+class Solution {
+ public:
+  vector<vector<int> > levelOrder(TreeNode* root) {
+    if (!root) return {};
+    vector<vector<int> > res;
+    queue<TreeNode*> q;
+    q.push(root);
+    // BFS
+    while (!q.empty()) {
+      res.push_back({});
+
+      int num = q.size();
+      for (int i = 0; i < num; ++i) {
+        auto node = q.front();
+        q.pop();
+
+        res.back().push_back(node->val);
+
+        if (node->left) q.push(node->left);
+        if (node->right) q.push(node->right);
+      }
+    }
+    return res;
+  }
+};
 // @lc code=end
