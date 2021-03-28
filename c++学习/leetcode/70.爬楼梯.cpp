@@ -45,12 +45,15 @@ using namespace std;
 
 class Solution {
  public:
-  int a[46]={0,1,2,3};
   int climbStairs(int n) {
-    for(int i=3; i<=n; i++){
-        a[i]=a[i-1]+a[i-2];
-    }    
-    return a[n];
+    if (n <= 2) return n;
+    int r = 0, f = 0, s = 1;
+    for (int i = 1; i <= n; i++) {
+      r = f;
+      f = s;
+      s = r + f;
+    }
+    return s;
   }
 };
 // @lc code=end
