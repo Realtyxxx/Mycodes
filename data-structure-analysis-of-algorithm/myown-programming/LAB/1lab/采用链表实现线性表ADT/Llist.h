@@ -40,7 +40,7 @@ class Llist : public List<E> {
 
   ~Llist() { removeall(); }
 
-  void print() const {
+  void print() {
     curr = head->next;
     while (curr) {
       std::cout << curr->element << " ";
@@ -66,7 +66,6 @@ class Llist : public List<E> {
   }
 
   E remove() {
-    assert(curr->next != NULL);
     E it = curr->next->element;
     Link<E>* ltemp = curr->next;
     if (tail == curr->next) tail = curr;
