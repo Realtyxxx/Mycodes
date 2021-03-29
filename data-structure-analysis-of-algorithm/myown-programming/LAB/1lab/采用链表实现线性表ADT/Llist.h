@@ -1,5 +1,8 @@
 #include <assert.h>
+
 #include <cstddef>
+#include <iostream>
+
 #include "Listf.h"
 
 template <typename E>
@@ -37,7 +40,14 @@ class Llist : public List<E> {
 
   ~Llist() { removeall(); }
 
-  void print() const;
+  void print() const {
+    curr = head->next;
+    while (curr) {
+      std::cout << curr->element << " ";
+      curr = curr->next;
+    }
+    std::cout << std::endl;
+  }
 
   void clear() {
     removeall();
