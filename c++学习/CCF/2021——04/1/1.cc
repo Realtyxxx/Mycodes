@@ -9,4 +9,6 @@ int main() {
     h[temp]++;
   }
   for (int i = 0; i < L; i++) std::cout << h[i] << " ";
+  free(h);
+  return 0;
 }

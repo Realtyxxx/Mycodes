@@ -1,0 +1,27 @@
+Script started on 2021-04-11 17:24:05+0000
+# ls
+main  main.cc  test.txt
+# clear
+[3J[H[2J# ./main
+4 16 1 6
+0 1 2 3
+4 5 6 7
+8 9 10 11
+12 13 14 15
+14# echo "changed to n"
+changed to n
+# g++ main.cc -o main
+./main# 
+4 16 1 6
+0 1 2 3
+4 5 6 7
+8 9 10 11
+12 13 14 15
+13# echo "ca hange back"
+change back
+# ^[[A^[[A^[[Bclear
+sh: 8: [A[A[Bclear: not found
+# clear
+[3J[H[2J# d exit
+
+Script done on 2021-04-11 17:26:42+0000
