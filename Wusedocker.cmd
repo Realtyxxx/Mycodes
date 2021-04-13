@@ -1,1 +1,4 @@
-docker run  --rm -it -v F:\代码study\GithubRepositories\Mycode:/realtyxxx realtyxxx/csapp_env /bin/zsh  
+@REM docker run --name=mycodes -it -v F:\Coding\GithubRepositories\Mycodes:/realtyxxx realtyxxx/csapp_env /bin/zsh  
+docker container start mycodes && ^
+docker container exec -it mycodes /bin/zsh 
+@REM docker container kill mycodes
