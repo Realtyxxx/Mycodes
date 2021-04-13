@@ -9,9 +9,14 @@ class AList : public List<E> {
   int listSize;
   int curr;
   E* listArray;
-  static const int defaultSize = 100;
+  static const int defaultSize = 1001;
 
  public:
+  E& operator[](int i) {
+    assert(i >= 0 && i < listSize);
+    return listArray[i];
+  }
+
   AList(int size = defaultSize) {
     maxSize = size;
     listSize = curr = 0;
@@ -57,9 +62,8 @@ class AList : public List<E> {
     if (curr < listSize) curr++;
   }
 
-  int currPos()  { return curr; }
-  int length()  { return listSize; }
-
+  int currPos() { return curr; }
+  int length() { return listSize; }
 
   void moveToPos(int pos) {
     assert((pos >= 0) && (pos <= listSize));

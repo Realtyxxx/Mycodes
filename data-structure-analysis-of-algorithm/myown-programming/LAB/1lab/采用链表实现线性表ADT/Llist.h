@@ -77,7 +77,10 @@ class Llist : public List<E> {
 
   void moveToStart() { curr = head; }
 
-  void moveToEnd() { curr = tail; }
+  void moveToEnd() {
+    curr = tail;
+    this->prev();
+  }
 
   void prev() {
     if (curr == head) return;

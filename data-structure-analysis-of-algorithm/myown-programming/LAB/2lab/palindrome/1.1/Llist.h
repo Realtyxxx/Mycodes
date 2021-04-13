@@ -23,9 +23,12 @@ class Llist : public List<E> {
   Link<E>* curr;
   Link<E>* tail;
   int cnt;
-  static const int defaultSize = 100;
+  // static const int defaultSize = 100;
 
-  void init() { curr = tail = head = new Link<E>; }
+  void init() {
+    curr = tail = head = new Link<E>;
+    cnt = 0;
+  }
 
   void removeall() {
     while (head != NULL) {
@@ -34,9 +37,10 @@ class Llist : public List<E> {
       delete curr;
     }
   }
-
+  //对外接口
  public:
-  Llist(int size = defaultSize) { init(); }
+  Llist() { init(); }
+  // Llist(int size = defaultSize) { init(); }
 
   ~Llist() { removeall(); }
 
@@ -77,7 +81,10 @@ class Llist : public List<E> {
 
   void moveToStart() { curr = head; }
 
-  void moveToEnd() { curr = tail; }
+  void moveToEnd() {
+    curr = tail;
+    this->prev();
+  }
 
   void prev() {
     if (curr == head) return;
