@@ -15,7 +15,7 @@ int main() {
   //   reverse.insert(temp);
   // }
   char temp;
-  while ((temp = cin.get()) != EOF and temp != '\n') {
+  while ((temp = cin.get()) != EOF && temp != '\n') {
     my_str.append(temp);
     reverse.insert(temp);
   }
