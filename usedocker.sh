@@ -1,1 +1,2 @@
-docker run  --rm -it -v $(dirname $0):/realtyxxx realtyxxx/csapp_env /bin/zsh
+
+docker run  --rm -it -v $(pwd):/realtyxxx realtyxxx/csapp_env /bin/zsh
