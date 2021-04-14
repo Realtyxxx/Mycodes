@@ -6,7 +6,6 @@
 
 @REM docker run --rm -it -v F:\Coding\GithubRepositories\Mycodes:/realtyxxx realtyxxx/csapp_env /bin/zsh 
 
+@REM 打开需要使用的目录然后运行一下
 
-@REM 打开需要使用的目录然后运行以下命令
-
-docker run -it --rm -v %cd%:/realtyxxx realtyxxx/csapp_env /bin/zsh
+docker run -it --rm -v %~dp0:/realtyxxx realtyxxx/csapp_env /bin/zsh
