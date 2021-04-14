@@ -1,1 +1,1 @@
-docker run  --rm -it -v /Users/realtyxxx_mac/Desktop/Mycodes:/realtyxxx realtyxxx/csapp_env /bin/zsh
+docker run  --rm -it -v $(dirname $0):/realtyxxx realtyxxx/csapp_env /bin/zsh
