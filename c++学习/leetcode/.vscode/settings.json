@@ -1,14 +1,15 @@
 {
 	"files.associations": {
-		"*.S": "arm",
-		"vector": "cpp",
-		"iosfwd": "cpp",
-		"iterator": "cpp",
-		"__split_buffer": "cpp",
-		"deque": "cpp",
-		"list": "cpp",
-		"ios": "cpp",
-		"valarray": "cpp",
-		"iostream": "cpp"
-	}
+    "*.S": "arm",
+    "vector": "cpp",
+    "iosfwd": "cpp",
+    "iterator": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "ios": "cpp",
+    "valarray": "cpp",
+    "iostream": "cpp",
+    "bitset": "cpp"
+  }
 }
