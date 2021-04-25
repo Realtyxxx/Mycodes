@@ -87,12 +87,11 @@ using namespace std;
 class Solution {
  public:
   uint32_t reverseBits(uint32_t n) {
-    int mask = 31;
+    int mask = 32;
     uint32_t ans = 0;
-    while (mask >= 0) {
+    while (mask--) {
       ans += ((n & 1) << mask);
-      n /= 2;
-      mask--;
+      n >>= 1;
     }
     return ans;
   }
