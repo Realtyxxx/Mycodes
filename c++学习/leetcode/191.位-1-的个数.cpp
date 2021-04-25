@@ -119,25 +119,20 @@ class Solution {
     int mask5 = 0x0000ffff;
 
     count = (x & mask1) + (mask1 & (x >> 1));
-    std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count)
-              << endl;
+    // std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count) << endl;
 
     // count = (count + (count >> 2)) & mask2;
     count = (count & mask2) + ((count >> 2) & mask2);  //两两相加
-    std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count)
-              << endl;
+    // std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count) << endl;
 
     count = (count + (count >> 4) & mask3);
-    std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count)
-              << endl;
+    // std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count) << endl;
 
     count = (count + (count >> 8) & mask4);
-    std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count)
-              << endl;
+    // std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count) << endl;
 
     count = (count + (count >> 16)) & mask5;
-    std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count)
-              << endl;
+    // std::cout << "bin:count=" << bitset<sizeof(unsigned int) * 8>(count) << endl;
 
     return count;
   }
