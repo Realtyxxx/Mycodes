@@ -1,0 +1,33 @@
+7
+2 3 1 5 7 6 4
+1 2 3 4 5 6 7
+
+
+n file included from /zipfs/_mytree.h:3:0,
+from /zipfs/main.cc:7:
+/zipfs/mytree.h: In constructor 'myNode::myNode(int)':
+/zipfs/mytree.h:10:7: warning: 'myNode::E' will be initialized after [-Wreorder]
+int E;
+^
+/zipfs/mytree.h:8:11: warning: 'myNode* myNode::left' [-Wreorder]
+myNode* left;
+^
+In file included from /zipfs/main.cc:7:0:
+/zipfs/_mytree.h:5:1: warning: when initialized here [-Wreorder]
+myNode::myNode(int val) : E(val), left(nullptr), right(nullptr){};
+^
+In file included from /zipfs/_mytree.h:3:0,
+from /zipfs/main.cc:7:
+/zipfs/mytree.h: In constructor 'myNode::myNode(int, myNode*, myNode*)':
+/zipfs/mytree.h:10:7: warning: 'myNode::E' will be initialized after [-Wreorder]
+int E;
+^
+/zipfs/mytree.h:8:11: warning: 'myNode* myNode::left' [-Wreorder]
+myNode* left;
+^
+In file included from /zipfs/main.cc:7:0:
+/zipfs/_mytree.h:6:1: warning: when initialized here [-Wreorder]
+myNode::myNode(int e, myNode* r, myNode* l) : E(e), left(nullptr), right(r){};
+^
+共有测试数据:3
+平均占用内存:1.398K    平均CPU时间:0.01016S    平均墙钟时间:0.01016S
