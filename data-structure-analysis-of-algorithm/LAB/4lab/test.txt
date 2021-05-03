@@ -1,0 +1,11 @@
+AB##C##
+AB##C##
+yes
+
+ABD##E##CGH###F##
+CGH####
+yes
+
+ABD##E##CGH###F##
+CG##F##
+no

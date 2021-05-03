@@ -1,6 +1,6 @@
 #include <assert.h>
 
-#include "mytree.h"
+#include "./mytree.h"
 
 myNode::myNode(int val) : E(val), left(nullptr), right(nullptr){};
 myNode::myNode(int e, myNode* r, myNode* l) : E(e), left(l), right(r){};
