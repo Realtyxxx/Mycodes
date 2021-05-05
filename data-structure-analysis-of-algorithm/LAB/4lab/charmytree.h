@@ -1,5 +1,5 @@
-#ifndef _MYTREE_
-#define _MYTREE_
+#ifndef __MYTREE__
+#define __MYTREE__
 
 class myNode {
  private:
