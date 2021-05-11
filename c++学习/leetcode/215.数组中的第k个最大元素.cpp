@@ -67,4 +67,33 @@ class Solution {
       return Find(nums,0,nums.size() - 1,i);
   }
 };
+/* 
+class Solution {
+public:
+    int randPartion(vector<int>&nums, int low, int high){
+        int pivot = nums[low];
+        while(low < high){
+            while (low < high && nums[high] >= pivot) --high;
+            nums[low] = nums[high];
+            while (low < high && nums[low] <= pivot) ++low;
+            nums[high] = nums[low];
+        }
+        nums[low] = pivot;
+        return low;
+    }
+
+    int Find(vector<int>& nums, int low, int high, int idx){
+        if(low == high) return nums[low];
+        int randInList = randPartion(nums, low, high);
+        if (randInList == idx) return nums[randInList];
+        else if( randInList < idx) return Find(nums, randInList + 1, high, idx);
+        else return Find(nums, low, high - 1, idx);
+    }
+
+    int findKthLargest(vector<int>& nums, int k) {
+        if(nums.size() == 1) return nums[0];
+        int idx = nums.size() - k;
+        return Find(nums, 0, nums.size() - 1, idx);
+    }
+}; */
 // @lc code=end
