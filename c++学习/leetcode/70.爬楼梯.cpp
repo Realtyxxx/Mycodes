@@ -44,9 +44,10 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   int climbStairs(int n) {
-    if (n <= 2) return n;
+    if (n <= 2)
+      return n;
     int r = 0, f = 0, s = 1;
     for (int i = 1; i <= n; i++) {
       r = f;

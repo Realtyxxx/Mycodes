@@ -32,28 +32,32 @@
 
 // @lc code=start
 #include <iostream>
-#include<string>
+#include <string>
 
 using namespace std;
 class Solution {
- public:
-//   bool isLetter(char character) {
-//     if ((character < 'z' && character > 'a') ||
-//         (character > 'A' && character < 'Z')) {
-//       return true;
-//     }
-//     return false;
-//   }
+public:
+  //   bool isLetter(char character) {
+  //     if ((character < 'z' && character > 'a') ||
+  //         (character > 'A' && character < 'Z')) {
+  //       return true;
+  //     }
+  //     return false;
+  //   }
   int lengthOfLastWord(string s) {
-      int i=s.length()-1;
-      bool haveWord=false;
-      while(s[i]==' '&&i>=0) i--;
+    int i = s.length() - 1;
+    bool haveWord = false;
+    while (s[i] == ' ' && i >= 0)
+      i--;
     //   cout<<s.length();
-      int right=i;
-      while(s[i]!=' '&&i>=0) {i--;haveWord=true;}
-      if(!haveWord) return 0;
-      return right-i;
-
+    int right = i;
+    while (s[i] != ' ' && i >= 0) {
+      i--;
+      haveWord = true;
+    }
+    if (!haveWord)
+      return 0;
+    return right - i;
   }
 };
 // @lc code=end

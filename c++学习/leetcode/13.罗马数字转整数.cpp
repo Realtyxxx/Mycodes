@@ -95,7 +95,7 @@
 #include <string>
 using namespace std;
 class Solution {
- public:
+public:
   int romanToInt(string s) {
     int ans = 0, size = s.size();
     for (int i = 0; i < size; i++) {

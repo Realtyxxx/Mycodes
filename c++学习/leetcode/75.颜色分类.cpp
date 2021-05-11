@@ -79,8 +79,8 @@
 using namespace std;
 
 class Solution {
- public:
-  void sortColors(vector<int>& nums) {
+public:
+  void sortColors(vector<int> &nums) {
     int color[3];
     for (auto num : nums) {
       color[num]++;

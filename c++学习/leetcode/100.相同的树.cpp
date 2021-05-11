@@ -77,9 +77,10 @@ using namespace std;
 }; */
 
 class Solution {
- public:
+public:
   bool isSameTree(TreeNode *p, TreeNode *q) {
-    if (q == nullptr && p == nullptr) return true;
+    if (q == nullptr && p == nullptr)
+      return true;
     if ((q == nullptr && p != nullptr) || (q != nullptr && p == nullptr) ||
         q->val != p->val)
       return false;

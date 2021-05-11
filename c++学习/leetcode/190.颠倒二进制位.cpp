@@ -85,7 +85,7 @@
 #include <string>
 using namespace std;
 class Solution {
- public:
+public:
   uint32_t reverseBits(uint32_t n) {
     int mask = 32;
     uint32_t ans = 0;

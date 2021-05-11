@@ -58,22 +58,23 @@ using namespace std;
 // };
 
 class Solution {
- public:
-  ListNode* rotateRight(ListNode* head, int k) {
-    if(head==nullptr) return head;
-    ListNode* ptr = head,* ans;
+public:
+  ListNode *rotateRight(ListNode *head, int k) {
+    if (head == nullptr)
+      return head;
+    ListNode *ptr = head, *ans;
     int len = 1;
     while (ptr->next != nullptr) {
       ptr = ptr->next;
-      len++; 
+      len++;
     }
-    ptr->next=head;
-    int count=len-k%len-1;
-    while(count--){
-      ptr=ptr->next;
+    ptr->next = head;
+    int count = len - k % len - 1;
+    while (count--) {
+      ptr = ptr->next;
     }
-    ans=ptr->next->next;
-    ptr->next->next=nullptr;
+    ans = ptr->next->next;
+    ptr->next->next = nullptr;
     return ans;
   }
 };

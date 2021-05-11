@@ -46,13 +46,13 @@ using namespace std;
 
 //头插法
 class Solution {
- public:
-  ListNode* reverseList(ListNode* head) {
-    ListNode* now = new ListNode(0);
-    ListNode* prev = new ListNode(0);
+public:
+  ListNode *reverseList(ListNode *head) {
+    ListNode *now = new ListNode(0);
+    ListNode *prev = new ListNode(0);
     prev->next = head;
     while (prev->next) {
-      ListNode* temp = prev->next->next;
+      ListNode *temp = prev->next->next;
       prev->next->next = now->next;
       now->next = prev->next;
       prev->next = temp;
@@ -61,7 +61,7 @@ class Solution {
   }
 };
 //反转指针法
-/* 
+/*
 class Solution {
  public:
   ListNode* reverseList(ListNode* head) {

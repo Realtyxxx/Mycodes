@@ -32,10 +32,10 @@
 #include <vector>
 using namespace std;
 class Solution {
- public:
+public:
   vector<int> vis;
-  void backtrack(vector<int>& nums, vector<vector<int>>& ans, int idx,
-                 vector<int>& perm) {
+  void backtrack(vector<int> &nums, vector<vector<int>> &ans, int idx,
+                 vector<int> &perm) {
     if (idx == nums.size()) {
       ans.emplace_back(perm);
       return;
@@ -52,7 +52,7 @@ class Solution {
     }
   }
 
-  vector<vector<int>> permuteUnique(vector<int>& nums) {
+  vector<vector<int>> permuteUnique(vector<int> &nums) {
     vector<vector<int>> ans;
     vector<int> perm;
     vis.resize(nums.size());

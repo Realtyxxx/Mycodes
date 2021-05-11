@@ -40,9 +40,10 @@
 // bool isBadVersion(int version);
 
 class Solution {
- public:
+public:
   int firstBadVersion(int n) {
-    if (n == 1) return 1;
+    if (n == 1)
+      return 1;
     long left = 1, right = n;
     while (left < right) {
       long mid = (left + right) >> 1;

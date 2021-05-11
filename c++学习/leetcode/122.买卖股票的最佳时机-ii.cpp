@@ -64,10 +64,11 @@
 using namespace std;
 
 class Solution {
- public:
-  int maxProfit(vector<int>& prices) {
+public:
+  int maxProfit(vector<int> &prices) {
     int l = prices.size();
-    if (l == 0) return 0;
+    if (l == 0)
+      return 0;
     int buy = prices[0], profit = 0;
     bool bought = false;
     int i = 0;

@@ -37,18 +37,18 @@
  */
 
 // @lc code=start
+#include <algorithm>
 #include <iostream>
 #include <set>
 #include <vector>
-#include <algorithm>
 using namespace std;
 class Solution {
- private:
+private:
   vector<int> temp;
   vector<vector<int>> ans;
   set<int> numset;
 
- public:
+public:
   void Dfs(vector<int> nums, int low, int need) {
     if (temp.size() == 3) {
       //   cout << "need :" << need << endl;
@@ -62,8 +62,10 @@ class Solution {
       return;
     }
     for (int i = low; i < nums.size(); ++i) {
-      if (nums.size() - i < int(4 - temp.size())) return;
-      if (i > low && nums[i] == nums[i - 1]) continue;
+      if (nums.size() - i < int(4 - temp.size()))
+        return;
+      if (i > low && nums[i] == nums[i - 1])
+        continue;
       if (i < nums.size() - 1 &&
           need < nums[i] + int(3 - temp.size()) * nums[i + 1])
         return;
@@ -79,9 +81,10 @@ class Solution {
     return;
   }
 
-  vector<vector<int>> fourSum(vector<int>& nums, int target) {
+  vector<vector<int>> fourSum(vector<int> &nums, int target) {
     sort(nums.begin(), nums.end());
-    for (auto e : nums) numset.insert(e);
+    for (auto e : nums)
+      numset.insert(e);
     Dfs(nums, 0, target);
     return ans;
   }

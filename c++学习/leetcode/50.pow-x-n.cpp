@@ -47,12 +47,14 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   double myPow(double x, int n) {
     bool isPos = true;
     double ans = 1;
-    if (n == 0) return 1;
-    if (n < 0) isPos = false;
+    if (n == 0)
+      return 1;
+    if (n < 0)
+      isPos = false;
     n = abs(n);
     do {
       if (n % 2 != 0) {

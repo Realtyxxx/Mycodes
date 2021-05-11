@@ -44,9 +44,10 @@
 
 // @lc code=start
 class Solution {
- public:
-  vector<vector<int>> merge(vector<vector<int>>& intervals) {
-    if (intervals.size() == 0) return intervals;
+public:
+  vector<vector<int>> merge(vector<vector<int>> &intervals) {
+    if (intervals.size() == 0)
+      return intervals;
     sort(intervals.begin(), intervals.end());
     vector<vector<int>> merged;
     for (int i = 0; i < intervals.size(); ++i) {

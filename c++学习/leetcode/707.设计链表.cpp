@@ -60,11 +60,11 @@
 // @lc code=start
 
 class MyLinkedList {
- public:
+public:
   /** Initialize your data structure here. */
   struct myListNode {
     int val;
-    myListNode* next;
+    myListNode *next;
     myListNode(int x) : val(x), next(nullptr) {}
   };
   MyLinkedList() {
@@ -78,7 +78,7 @@ class MyLinkedList {
     if (index > _size - 1 || index < 0) {
       return -1;
     }
-    myListNode* curr = _dummyNode->next;
+    myListNode *curr = _dummyNode->next;
     for (int i = 0; i < index; i++) {
       curr = curr->next;
     }
@@ -88,7 +88,7 @@ class MyLinkedList {
   /** Add a node of value val before the first element of the linked list. After
    * the insertion, the new node will be the first node of the linked list. */
   void addAtHead(int val) {
-    myListNode* newHead = new myListNode(val);
+    myListNode *newHead = new myListNode(val);
     newHead->next = _dummyNode->next;
     _dummyNode->next = newHead;
     _size++;
@@ -96,7 +96,7 @@ class MyLinkedList {
 
   /** Append a node of value val to the last element of the linked list. */
   void addAtTail(int val) {
-    myListNode* curr = _dummyNode;
+    myListNode *curr = _dummyNode;
     while (curr->next != nullptr) {
       curr = curr->next;
     }
@@ -109,12 +109,13 @@ class MyLinkedList {
    * end of linked list. If index is greater than the length, the node will not
    * be inserted. */
   void addAtIndex(int index, int val) {
-    if (index > _size) return;
-    myListNode* curr = _dummyNode;
+    if (index > _size)
+      return;
+    myListNode *curr = _dummyNode;
     for (int i = 0; i < index; ++i) {
       curr = curr->next;
     }
-    myListNode* newNode = new myListNode(val);
+    myListNode *newNode = new myListNode(val);
     newNode->next = curr->next;
     curr->next = newNode;
     ++_size;
@@ -122,19 +123,20 @@ class MyLinkedList {
 
   /** Delete the index-th node in the linked list, if the index is valid. */
   void deleteAtIndex(int index) {
-    if (index >= _size || index < 0) return;
-    myListNode* curr = _dummyNode;
+    if (index >= _size || index < 0)
+      return;
+    myListNode *curr = _dummyNode;
     for (int i = 0; i < index; i++) {
       curr = curr->next;
     }
-    myListNode* tmp = curr->next;
+    myListNode *tmp = curr->next;
     curr->next = curr->next->next;
     delete tmp;
     _size--;
   }
 
- private:
-  myListNode* _dummyNode;
+private:
+  myListNode *_dummyNode;
   int _size;
 };
 

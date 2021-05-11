@@ -45,9 +45,9 @@
 
 using namespace std;
 class Solution {
- public:
-  vector<vector<int>> insert(vector<vector<int>>& intervals,
-                             vector<int>& newInterval) {
+public:
+  vector<vector<int>> insert(vector<vector<int>> &intervals,
+                             vector<int> &newInterval) {
     int left = newInterval[0];
     int right = newInterval[1];
     bool placed = false;
@@ -66,8 +66,8 @@ class Solution {
         right = max(interval[1], right);
       }
     }
-    if(!placed){
-        ans.push_back({left,right});
+    if (!placed) {
+      ans.push_back({left, right});
     }
     return ans;
   }

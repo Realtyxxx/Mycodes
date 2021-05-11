@@ -32,9 +32,10 @@ using namespace std;
 
 // @lc code=start
 class Solution {
- public:
-  int trap(vector<int>& height) {
-    if (height.size() == 0) return 0;
+public:
+  int trap(vector<int> &height) {
+    if (height.size() == 0)
+      return 0;
     int ans = 0, size = height.size();
     vector<int> leftmax(size), rightmax(size);
     leftmax[0] = height[0];

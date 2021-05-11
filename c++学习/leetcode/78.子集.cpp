@@ -43,8 +43,8 @@ vector<vector<int>> res;
 int n;
 
 class Solution {
- public:
-  vector<vector<int>> subsets(vector<int>& nums) {
+public:
+  vector<vector<int>> subsets(vector<int> &nums) {
     n = nums.size();
     vector<int> cur;
     for (int k = 0; k <= n; ++k) {
@@ -52,8 +52,8 @@ class Solution {
     }
     return res;
   }
-  void traceback(int start, int k, vector<vector<int>>& res, vector<int>& nums,
-                 vector<int>& cur) {
+  void traceback(int start, int k, vector<vector<int>> &res, vector<int> &nums,
+                 vector<int> &cur) {
     if (k == 0) {
       res.push_back(cur);
       return;

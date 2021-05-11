@@ -46,19 +46,22 @@
 // #include "mytree.hpp"
 // -std=c++11
 class Solution {
- public:
-  vector<int> postorderTraversal(TreeNode* root) {
+public:
+  vector<int> postorderTraversal(TreeNode *root) {
     vector<int> result;
-    if (root == nullptr) return result;
-    stack<TreeNode*> stk;
-    TreeNode* node = root;
+    if (root == nullptr)
+      return result;
+    stack<TreeNode *> stk;
+    TreeNode *node = root;
     stk.emplace(node);
     while (!stk.empty()) {
       node = stk.top();
       stk.pop();
       result.emplace_back(node->val);
-      if (node->left) stk.emplace(node->left);
-      if (node->right) stk.emplace(node->right);
+      if (node->left)
+        stk.emplace(node->left);
+      if (node->right)
+        stk.emplace(node->right);
     }
     reverse(result.begin(), result.end());
     return result;

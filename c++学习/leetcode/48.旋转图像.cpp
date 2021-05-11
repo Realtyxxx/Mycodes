@@ -63,12 +63,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
- public:
-  void rotate(vector<vector<int>>& matrix) {
+public:
+  void rotate(vector<vector<int>> &matrix) {
     int l = matrix.size();
     int temp;
-    for (int i = 0; i < (l + 1) / 2 ; ++i) {
-      for (int j = 0; j < l / 2 ; ++j) {
+    for (int i = 0; i < (l + 1) / 2; ++i) {
+      for (int j = 0; j < l / 2; ++j) {
         temp = matrix[i][j];
         matrix[i][j] = matrix[l - 1 - j][i];
         matrix[l - 1 - j][i] = matrix[l - 1 - i][l - 1 - j];

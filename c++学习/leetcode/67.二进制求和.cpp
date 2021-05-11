@@ -46,7 +46,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
- public:
+public:
   string addBinary(string a, string b) {
     string ans;
     reverse(a.begin(), a.end());

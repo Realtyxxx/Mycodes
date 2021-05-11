@@ -54,10 +54,11 @@
 using namespace std;
 
 class Solution {
- public:
-  vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+public:
+  vector<int> intersect(vector<int> &nums1, vector<int> &nums2) {
     int l1 = nums1.size(), l2 = nums2.size();
-    if (l1 == 0 || l2 == 0) return {};
+    if (l1 == 0 || l2 == 0)
+      return {};
 
     sort(nums1.begin(), nums1.end());
     sort(nums2.begin(), nums2.end());
@@ -90,7 +91,6 @@ class Solution {
         while (count--) {
           ans.push_back(refer);
         }
-        
       }
     }
     return ans;

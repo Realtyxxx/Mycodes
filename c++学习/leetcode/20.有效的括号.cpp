@@ -75,15 +75,19 @@
 #include <string>
 using namespace std;
 class Solution {
- public:
+public:
   bool matched(char a, char b) {
-    if (a == '{' && b == '}') return true;
-    if (a == '[' && b == ']') return true;
-    if (a == '(' && b == ')') return true;
-    if (a == '<' && b == '>') return true;
+    if (a == '{' && b == '}')
+      return true;
+    if (a == '[' && b == ']')
+      return true;
+    if (a == '(' && b == ')')
+      return true;
+    if (a == '<' && b == '>')
+      return true;
     return false;
   }
-  
+
   bool isValid(string s) {
     stack<char> temp;
     for (auto c : s) {
@@ -94,9 +98,10 @@ class Solution {
           temp.push(c);
       } else {
         temp.push(c);
-      } 
+      }
     }
-    if(!temp.empty()) return false;
+    if (!temp.empty())
+      return false;
     return true;
   }
 };

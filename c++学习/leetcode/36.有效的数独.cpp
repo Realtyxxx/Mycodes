@@ -82,18 +82,22 @@
 using namespace std;
 
 class Solution {
- public:
-  bool isValidSudoku(vector<vector<char>>& board) {
+public:
+  bool isValidSudoku(vector<vector<char>> &board) {
     int row[9][10] = {0};
     int col[9][10] = {0};
     int box[9][10] = {0};
     for (int i = 0; i < board[0].size(); ++i) {
       for (int j = 0; j < board.size(); ++j) {
-        if (board[i][j] == '.') continue;
+        if (board[i][j] == '.')
+          continue;
         int curnum = board[i][j] - '0';
-        if (row[i][curnum] != 0) return false;
-        if (col[j][curnum] != 0) return false;
-        if (box[j / 3 + (i / 3) * 3][curnum] != 0) return false;
+        if (row[i][curnum] != 0)
+          return false;
+        if (col[j][curnum] != 0)
+          return false;
+        if (box[j / 3 + (i / 3) * 3][curnum] != 0)
+          return false;
         row[i][curnum] = 1;
         col[j][curnum] = 1;
         box[j / 3 + (i / 3) * 3][curnum] = 1;

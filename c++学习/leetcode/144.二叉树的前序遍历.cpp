@@ -84,28 +84,29 @@
 #include "mytree.hpp"
 
 class Solution {
- public:
+public:
   vector<int> result;
   // recursion
-  void preorder(TreeNode* root) {
-    if (root == nullptr) return;
+  void preorder(TreeNode *root) {
+    if (root == nullptr)
+      return;
     result.push_back(root->val);
     preorder(root->left);
     preorder(root->right);
     return;
   }
-  vector<int> preorderTraversal(TreeNode* root) {
+  vector<int> preorderTraversal(TreeNode *root) {
     preorder(root);
     return result;
   }
 
   // iteration
-  vector<int> preorderTraversal(TreeNode* root) {
+  vector<int> preorderTraversal(TreeNode *root) {
     if (root == nullptr) {
       return result;
     }
-    stack<TreeNode*> stk;
-    TreeNode* node = root;
+    stack<TreeNode *> stk;
+    TreeNode *node = root;
     while (!stk.empty() || node != nullptr) {
       while (node != nullptr) {
         result.emplace_back(node->val);
@@ -120,8 +121,9 @@ class Solution {
   }
 
   // morris‘god-lever traversal!!!!
-  vector<int> preorderTraversal(TreeNode* root) {
-    if (root == nullptr) return result;
+  vector<int> preorderTraversal(TreeNode *root) {
+    if (root == nullptr)
+      return result;
 
     TreeNode *cur = root, *mostRight = nullptr;
 

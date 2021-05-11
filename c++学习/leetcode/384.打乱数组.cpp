@@ -57,19 +57,19 @@
  */
 
 // @lc code=start
-#include <time.h>
 #include <iostream>
+#include <time.h>
 #include <vector>
 using namespace std;
 class Solution {
- public:
+public:
   struct myVec {
     int key;
     bool used;
     int value;
   };
 
-  Solution(vector<int>& nums) {
+  Solution(vector<int> &nums) {
     size = nums.size();
     ve = new myVec[size];
     for (int i = 0; i < nums.size(); i++) {
@@ -101,12 +101,13 @@ class Solution {
       res.push_back(ve[randNum].value);
       ve[randNum].used = true;
     }
-    for (int i = 0; i < size; i++) ve[i].used = false;
+    for (int i = 0; i < size; i++)
+      ve[i].used = false;
     return res;
   }
 
- private:
-  myVec* ve;
+private:
+  myVec *ve;
   int size;
   int seed = 1;
 };

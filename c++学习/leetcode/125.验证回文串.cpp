@@ -37,7 +37,7 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   bool isPalindrome(string s) {
     string s1, s2;
     for (auto e : s) {
@@ -49,8 +49,10 @@ class Solution {
     for (int i = s1.size() - 1; i >= 0; i--) {
       s2 += s1[i];
     }
-    if(s1==s2)return true;
-    else return false;
+    if (s1 == s2)
+      return true;
+    else
+      return false;
   }
 };
 // @lc code=end

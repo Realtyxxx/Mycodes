@@ -68,24 +68,24 @@
 //   ListNode(int x, ListNode* next) : val(x), next(next) {}
 // };
 
-
 class Solution {
- public:
-  ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
+public:
+  ListNode *mergeInBetween(ListNode *list1, int a, int b, ListNode *list2) {
     int len = b - a + 1;
-    ListNode* la = list1;
-    ListNode* lb = list1;
+    ListNode *la = list1;
+    ListNode *lb = list1;
     while (len--) {
       lb = lb->next;
     }
-    for (int i = 0; i < a - 1;++i){
-        la = la->next;
-        lb = lb->next;
+    for (int i = 0; i < a - 1; ++i) {
+      la = la->next;
+      lb = lb->next;
     }
-    ListNode* ltemp = la->next;
+    ListNode *ltemp = la->next;
     la->next = list2;
-    ListNode* l2end = list2;
-    while(l2end->next!=nullptr) l2end=l2end->next;
+    ListNode *l2end = list2;
+    while (l2end->next != nullptr)
+      l2end = l2end->next;
     la->next = list2;
     l2end->next = lb->next;
     lb->next = nullptr;

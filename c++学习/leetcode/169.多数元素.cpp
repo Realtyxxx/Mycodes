@@ -32,13 +32,13 @@
  *
  *
  */
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // @lc code=start
 class Solution {
- public:
-  int majorityElement(vector<int>& nums) {
+public:
+  int majorityElement(vector<int> &nums) {
     int count = 0, res;
     for (auto num : nums) {
       if (count == 0) {

@@ -57,16 +57,16 @@ class Solution1 {
   int post_idx;
   unordered_map<int, int> idx_map;
 
- public:
-  TreeNode* helper(int in_left, int in_right, vector<int>& inorder,
-                   vector<int>& postorder) {
+public:
+  TreeNode *helper(int in_left, int in_right, vector<int> &inorder,
+                   vector<int> &postorder) {
     //如果没有节点构造二叉树，就结束
     if (in_left > in_right) {
       return nullptr;
     }
     //选择post_idx位置的元素作为当前子树的根结点
     int root_val = postorder[post_idx];
-    TreeNode* root = new TreeNode(root_val);
+    TreeNode *root = new TreeNode(root_val);
     //根据root所在位置分成左右子树
     int index = idx_map[root_val];
 
@@ -79,12 +79,12 @@ class Solution1 {
     return root;
   }
 
-  TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+  TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder) {
     //从后续遍历的最后一个元素开始
     post_idx = (int)postorder.size() - 1;
     //建立（元素，下标）键值对的哈希表
     int idx = 0;
-    for (auto& val : inorder) {
+    for (auto &val : inorder) {
       idx_map[val] = idx++;
     }
     return helper(0, (int)inorder.size() - 1, inorder, postorder);
@@ -92,11 +92,12 @@ class Solution1 {
 };
 
 class Solution {
- public:
-  TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-    if (postorder.size() == 0) return nullptr;
+public:
+  TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder) {
+    if (postorder.size() == 0)
+      return nullptr;
     auto root = new TreeNode(postorder.back());
-    auto s = stack<TreeNode*>();
+    auto s = stack<TreeNode *>();
     s.push(root);
     int inorderIndex = inorder.size() - 1;
     //后序遍历每次压栈直接成为右儿子，中序遍历对比栈中顶部元素，，（先对比处理，再压栈）
@@ -108,8 +109,7 @@ class Solution {
       if (node->val != inorder[inorderIndex]) {
         node->right = new TreeNode(postorderVal);
         s.push(node->right);
-      }
-      else {
+      } else {
         while (!s.empty() && s.top()->val == inorder[inorderIndex]) {
           node = s.top();
           s.pop();
@@ -117,7 +117,7 @@ class Solution {
         }
         node->left = new TreeNode(postorderVal);
         s.push(node->left);
-      } 
+      }
     }
     return root;
   }

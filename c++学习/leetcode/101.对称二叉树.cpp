@@ -58,8 +58,8 @@
 #include "mytree.hpp"
 
 class Solution {
- public:
-  bool check(TreeNode* l, TreeNode* r) {
+public:
+  bool check(TreeNode *l, TreeNode *r) {
     if (!l && !r)
       return true;
     else if (!l || !r)
@@ -68,6 +68,6 @@ class Solution {
     return (l->val == r->val) && check(l->left, r->right) &&
            check(l->right, r->left);
   }
-  bool isSymmetric(TreeNode* root) { return check(root, root); }
+  bool isSymmetric(TreeNode *root) { return check(root, root); }
 };
 // @lc code=end

@@ -47,8 +47,8 @@
 using namespace std;
 
 class Solution {
- public:
-  void rotate(vector<int>& nums, int k) {
+public:
+  void rotate(vector<int> &nums, int k) {
     // int l = nums.size();
     reverse(nums.begin(), nums.end());
     // for (auto e : nums) cout << e << " ";

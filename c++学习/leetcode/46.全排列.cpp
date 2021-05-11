@@ -38,13 +38,13 @@
 using namespace std;
 // @lc code=start
 class Solution {
- public:
-  vector<vector<int> > permute(vector<int>& nums) {
-    vector<vector<int> > res;
+public:
+  vector<vector<int>> permute(vector<int> &nums) {
+    vector<vector<int>> res;
     traceback(res, nums, 0, nums.size());
     return res;
   }
-  void traceback(vector<vector<int> >& res, vector<int>& outputs, int target,
+  void traceback(vector<vector<int>> &res, vector<int> &outputs, int target,
                  int len) {
     if (target == len) {
       res.emplace_back(outputs);

@@ -37,11 +37,12 @@
 using namespace std;
 // @lc code=start
 class Solution {
- public:
-  vector<vector<int> > generate(int numRows) {
-    if (numRows == 0) return {};
+public:
+  vector<vector<int>> generate(int numRows) {
+    if (numRows == 0)
+      return {};
     vector<int> temp;
-    vector<vector<int> > ans;
+    vector<vector<int>> ans;
     temp.push_back(1);
     ans.push_back(temp);
     while (--numRows) {

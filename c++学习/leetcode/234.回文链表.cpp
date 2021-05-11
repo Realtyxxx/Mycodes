@@ -56,15 +56,16 @@ using namespace std;
  */
 // answer of the questions.
 class Solution {
- public:
-  bool isPalindrome(ListNode* head) {
-    if (head == nullptr) return true;
-    ListNode* firstHalfEnd = endOfFirstHalf(head);
-    ListNode* secondHalfStart = reverseList(firstHalfEnd->next);
+public:
+  bool isPalindrome(ListNode *head) {
+    if (head == nullptr)
+      return true;
+    ListNode *firstHalfEnd = endOfFirstHalf(head);
+    ListNode *secondHalfStart = reverseList(firstHalfEnd->next);
     // judge if Palindrome
     bool result = true;
-    ListNode* p1 = head;
-    ListNode* p2 = secondHalfStart;
+    ListNode *p1 = head;
+    ListNode *p2 = secondHalfStart;
     while (result && p1 != nullptr && p2 != nullptr) {
       if (p1->val != p2->val) {
         result = false;
@@ -77,11 +78,11 @@ class Solution {
     return result;
   }
 
-  ListNode* reverseList(ListNode* head) {
-    ListNode* prev = nullptr;
-    ListNode* curr = head;
+  ListNode *reverseList(ListNode *head) {
+    ListNode *prev = nullptr;
+    ListNode *curr = head;
     while (curr != nullptr) {
-      ListNode* nextTemp = curr->next;
+      ListNode *nextTemp = curr->next;
       curr->next = prev;
       prev = curr;
       curr = nextTemp;
@@ -89,9 +90,9 @@ class Solution {
     return prev;
   }
 
-  ListNode* endOfFirstHalf(ListNode* head) {
-    ListNode* fast = head;
-    ListNode* slow = head;
+  ListNode *endOfFirstHalf(ListNode *head) {
+    ListNode *fast = head;
+    ListNode *slow = head;
     while (fast->next != nullptr && fast->next->next != nullptr) {
       fast = fast->next->next;
       slow = slow->next;

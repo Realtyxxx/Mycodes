@@ -59,9 +59,10 @@ using namespace std;
 
 // @lc code=start
 class Solution {
- public:
+public:
   string countAndSay(int n) {
-    if (n == 1) return "1";
+    if (n == 1)
+      return "1";
     string previous = countAndSay(n - 1), ans = "";
     int count = 1;
     for (int i = 0; i < previous.length(); ++i) {

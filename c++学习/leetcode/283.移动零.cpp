@@ -35,14 +35,14 @@
 using namespace std;
 
 class Solution {
- public:
-  void moveZeroes(vector<int>& nums) {
+public:
+  void moveZeroes(vector<int> &nums) {
     int pos = 0;
-    for(auto num:nums){
-        if(num != 0)
-            nums[pos++]=num;
+    for (auto num : nums) {
+      if (num != 0)
+        nums[pos++] = num;
     }
-    memset(&nums[pos], 0, sizeof(int) * (nums.size() - pos  ));
+    memset(&nums[pos], 0, sizeof(int) * (nums.size() - pos));
     // for(;pos<nums.size();++pos){
     //     nums[pos] = 0;
     // }

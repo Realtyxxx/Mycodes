@@ -78,7 +78,7 @@ using namespace std;
 }; */
 typedef long long ll;
 class Solution {
- public:
+public:
   bool isValidBST(TreeNode *root) {
     stack<TreeNode *> myst;
     ll inorder = (ll)INT_MIN - 1;
@@ -89,7 +89,8 @@ class Solution {
       }
       root = myst.top();
       myst.pop();
-      if (root->val <= inorder) return false;
+      if (root->val <= inorder)
+        return false;
       inorder = root->val;
       root = root->right;
     }

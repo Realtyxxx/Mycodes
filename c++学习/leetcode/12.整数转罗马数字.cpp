@@ -75,7 +75,7 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   string intToRoman(int num) {
     string ans;
     int divisor;
@@ -89,7 +89,8 @@ class Solution {
 
     divisor = num / 900;
     num %= 900;
-    if (divisor) ans += "CM";
+    if (divisor)
+      ans += "CM";
 
     divisor = num / 500;
     num %= 500;
@@ -100,7 +101,8 @@ class Solution {
 
     divisor = num / 400;
     num %= 400;
-    if (divisor) ans += "CD";
+    if (divisor)
+      ans += "CD";
 
     divisor = num / 100;
     num %= 100;
@@ -111,15 +113,18 @@ class Solution {
 
     divisor = num / 90;
     num %= 90;
-    if (divisor) ans += "XC";
+    if (divisor)
+      ans += "XC";
 
     divisor = num / 50;
     num %= 50;
-    if (divisor) ans += 'L';
+    if (divisor)
+      ans += 'L';
 
     divisor = num / 40;
     num %= 40;
-    if (divisor) ans += "XL";
+    if (divisor)
+      ans += "XL";
 
     divisor = num / 10;
     num %= 10;
@@ -130,15 +135,18 @@ class Solution {
 
     divisor = num / 9;
     num %= 9;
-    if (divisor) ans += "IX";
+    if (divisor)
+      ans += "IX";
 
     divisor = num / 5;
     num %= 5;
-    if (divisor) ans += 'V';
+    if (divisor)
+      ans += 'V';
 
     divisor = num / 4;
     num %= 4;
-    if (divisor) ans += "IV";
+    if (divisor)
+      ans += "IV";
 
     divisor = num / 1;
     num %= 1;

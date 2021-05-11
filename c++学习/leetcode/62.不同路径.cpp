@@ -58,16 +58,17 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   int uniquePaths(int m, int n) {
-    if (m == 1 && n == 1) return 1;
+    if (m == 1 && n == 1)
+      return 1;
     vector<int> ways(n, 1);
-    for(int i=1; i<m; i++){
-        for(int i=1;i<n; i++){
-            ways[i]=ways[i-1]+ways[i];
-        }
+    for (int i = 1; i < m; i++) {
+      for (int i = 1; i < n; i++) {
+        ways[i] = ways[i - 1] + ways[i];
+      }
     }
-    return ways[n-1];
+    return ways[n - 1];
   }
 };
 // @lc code=end

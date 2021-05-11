@@ -65,10 +65,12 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   int lengthOfLongestSubstring(string s) {
-    if (s.empty()) return 0;
-    if (s.size() == 1) return 1;
+    if (s.empty())
+      return 0;
+    if (s.size() == 1)
+      return 1;
     int hash[256];
     vector<int> dp(s.size() + 1);
     dp[0] = 1;
@@ -84,7 +86,8 @@ class Solution {
         hash[s[i]] = i;
       }
       ans = max(ans, max(dp[i - 1], dp[i]));
-//   "cout << i << ':' << dp[i] <<" s[i] : "<<s[i]<< " hash[s[i]] : "<<hash[s[i]] << ' ' << "ans: << ans << endl;
+      //   "cout << i << ':' << dp[i] <<" s[i] : "<<s[i]<< " hash[s[i]] :
+      //   "<<hash[s[i]] << ' ' << "ans: << ans << endl;
     }
     return ans;
   }

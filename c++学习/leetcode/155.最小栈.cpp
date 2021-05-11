@@ -61,7 +61,7 @@
 #include <stack>
 using namespace std;
 class MinStack {
- public:
+public:
   stack<int> min_stack;
   stack<int> x_stack;
   /** initialize your data structure here. */

@@ -53,7 +53,7 @@
 using namespace std;
 //线性筛
 class Solution {
- public:
+public:
   int countPrimes(int n) {
     vector<int> primes;
     vector<int> isprime(n, 1);
@@ -63,7 +63,8 @@ class Solution {
       }
       for (int j = 0; j < primes.size() && primes[j] * i < n; j++) {
         isprime[i * primes[j]] = 0;
-        if (i % primes[j] == 0) break;
+        if (i % primes[j] == 0)
+          break;
       }
     }
     return primes.size();

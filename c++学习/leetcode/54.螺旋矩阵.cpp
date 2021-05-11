@@ -44,11 +44,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
- public:
-  vector<int> spiralOrder(vector<vector<int>>& matrix) {
+public:
+  vector<int> spiralOrder(vector<vector<int>> &matrix) {
     int rows = matrix.size();
     int columns = matrix[0].size();
-    if (rows == 0 || columns == 0) return {};
+    if (rows == 0 || columns == 0)
+      return {};
     vector<int> ans;
     int left = 0, right = columns - 1, top = 0, bottom = rows - 1;
     while (left <= right && top <= bottom) {

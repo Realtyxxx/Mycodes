@@ -82,10 +82,12 @@ using namespace std;
 };
  */
 class Solution1 {
- public:
+public:
   bool hasCycle(ListNode *head) {
-    if (head == NULL) return false;
-    if (head->next == NULL) return false;
+    if (head == NULL)
+      return false;
+    if (head->next == NULL)
+      return false;
     ListNode *curr = head;
     unordered_set<ListNode *> take;
     bool result = false;
@@ -102,18 +104,20 @@ class Solution1 {
 };
 
 class Solution {
- public:
+public:
   bool hasCycle(ListNode *head) {
-    if(head == NULL) return false;
-    if(head->next == NULL) return false;
+    if (head == NULL)
+      return false;
+    if (head->next == NULL)
+      return false;
     ListNode *slow = head;
     ListNode *fast = head->next;
-    while(slow != fast) {
-        if(fast == NULL || fast->next == NULL) {
-            return false;
-        }
-        slow = slow->next;
-        fast = fast->next->next;
+    while (slow != fast) {
+      if (fast == NULL || fast->next == NULL) {
+        return false;
+      }
+      slow = slow->next;
+      fast = fast->next->next;
     }
     return true;
   }

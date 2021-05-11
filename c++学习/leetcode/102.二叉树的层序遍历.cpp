@@ -71,11 +71,12 @@
 //   }
 // };
 class Solution {
- public:
-  vector<vector<int> > levelOrder(TreeNode* root) {
-    if (!root) return {};
-    vector<vector<int> > res;
-    queue<TreeNode*> q;
+public:
+  vector<vector<int>> levelOrder(TreeNode *root) {
+    if (!root)
+      return {};
+    vector<vector<int>> res;
+    queue<TreeNode *> q;
     q.push(root);
     // BFS
     while (!q.empty()) {
@@ -88,8 +89,10 @@ class Solution {
 
         res.back().push_back(node->val);
 
-        if (node->left) q.push(node->left);
-        if (node->right) q.push(node->right);
+        if (node->left)
+          q.push(node->left);
+        if (node->right)
+          q.push(node->right);
       }
     }
     return res;

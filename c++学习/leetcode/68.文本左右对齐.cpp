@@ -85,8 +85,8 @@
 using namespace std;
 
 class Solution {
- public:
-  vector<string> fullJustify(vector<string>& words, int maxWidth) {
+public:
+  vector<string> fullJustify(vector<string> &words, int maxWidth) {
     vector<int> wordsLength;
     vector<string> res;
     int n = words.size();
@@ -100,7 +100,8 @@ class Solution {
       int length = maxWidth;
 
       while (length > 0 && i < n) {
-        if (i >= 14) cout << "!!!" << length - wordsLength[i] - (end - begin) << endl;
+        if (i >= 14)
+          cout << "!!!" << length - wordsLength[i] - (end - begin) << endl;
         if (length - wordsLength[i] - (end - begin) >= 0) {
           length -= wordsLength[i];
           i++;
@@ -121,7 +122,8 @@ class Solution {
           }
         }
         int len = maxWidth - temp.size();
-        for (int k = 0; k < len; k++) temp += ' ';
+        for (int k = 0; k < len; k++)
+          temp += ' ';
         res.push_back(temp);
         break;
       }
@@ -130,7 +132,8 @@ class Solution {
       if (divisor == 0) {
         temp += words[begin];
         int len = maxWidth - temp.size();
-        for (int k = 0; k < len; k++) temp += ' ';
+        for (int k = 0; k < len; k++)
+          temp += ' ';
         res.push_back(temp);
         continue;
       }
@@ -141,7 +144,8 @@ class Solution {
           temp += words[begin];
           begin++;
           if (begin != end) {
-            for (int k = 0; k < spaces; k++) temp += ' ';
+            for (int k = 0; k < spaces; k++)
+              temp += ' ';
           }
         }
       } else {
@@ -150,10 +154,12 @@ class Solution {
           begin++;
           if (begin != end) {
             if (residue > 0) {
-              for (int k = 0; k < spaces + 1; k++) temp += ' ';
+              for (int k = 0; k < spaces + 1; k++)
+                temp += ' ';
               residue--;
             } else
-              for (int k = 0; k < spaces; k++) temp += ' ';
+              for (int k = 0; k < spaces; k++)
+                temp += ' ';
           }
         }
       }

@@ -55,9 +55,10 @@
 using namespace std;
 
 class Solution {
- public:
-  void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-    if (n == 0) return;
+public:
+  void merge(vector<int> &nums1, int m, vector<int> &nums2, int n) {
+    if (n == 0)
+      return;
     vector<int> temp;
     int i = 0, j = 0;
     for (; i < m && j < n;) {
