@@ -39,7 +39,7 @@
 using namespace std;
 
 //快速排序
-class Solution {
+/* class Solution {
  public:
   int Find(vector<int>& nums, int low, int high, int k) {           //k存储的是找到low到high当中第k小
     if (low == high) return nums[low];                              //如果low==high也就是正好遇到了最坏情况，每次下标刚好错过，
@@ -66,8 +66,8 @@ class Solution {
       int i =nums.size() - k + 1;
       return Find(nums,0,nums.size() - 1,i);
   }
-};
-/* 
+}; */
+
 class Solution {
 public:
     int randPartion(vector<int>&nums, int low, int high){
@@ -95,5 +95,5 @@ public:
         int idx = nums.size() - k;
         return Find(nums, 0, nums.size() - 1, idx);
     }
-}; */
+};
 // @lc code=end
