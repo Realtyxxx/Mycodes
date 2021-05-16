@@ -5,8 +5,11 @@
  */
 
 // @lc code=start
+#include <vector>
+#include <algorithm>
+using namespace std;
 class Solution {
-public:
+ public:
   int maxArea(vector<int> &height) {
     int left = 0, right = height.size() - 1;
     int ans = 0;
