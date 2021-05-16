@@ -29,15 +29,16 @@ int main() {
   for (int i = 0; i < myVec.size(); i++) {
     myVec[i] = rand() % 10000 + 1;
   }
-  printVec(myVec);
-
+  // printVec(myVec);
+  double elapsed;
   tic();
-  // quickSort(myVec);
-  heapSort(myVec);
 
-  printVec(myVec);
+  quickSort(myVec);
+  // heapSort(myVec);
+  elapsed = toc();
+  cout << elapsed << endl;
 
-  cout << toc() << endl;
+  // printVec(myVec);
 
   return 0;
 }
