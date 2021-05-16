@@ -31,9 +31,12 @@ void makeHeap(vector<int>& nums, int length) {
 }
 
 void heapSort(vector<int>& nums) {
-  for (int i = nums.size(); i >= 1;) {
-    makeHeap(nums, i);
-    swap(nums, 0, --i);
+  int size = nums.size();
+  makeHeap(nums, size);
+  swap(nums, 0, size - 1);
+  for (int i = size - 1; i >= 0;) {
+    downShift(nums, i--, 0);
+    swap(nums, 0, i);
   }
 }
 
