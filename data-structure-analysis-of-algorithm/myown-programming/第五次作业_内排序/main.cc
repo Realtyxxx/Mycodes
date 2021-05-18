@@ -10,7 +10,7 @@
 #include "radixSort.h"
 #define TESTTRUE 0
 #define TESTTIME 1
-#define array_length (1024 * 1024 * 25)
+#define array_length (1024 * 1024)
 // #define array_length 10
 
 using namespace std;
@@ -27,7 +27,6 @@ double toc(void) {
 }
 
 int main(int argc, char** argv) {
-#pragma omp parallel num_threads(8)
   srand(time(NULL));
   vector<int> myVec(array_length);
   for (int i = 0; i < myVec.size(); i++) {

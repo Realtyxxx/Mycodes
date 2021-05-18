@@ -31,7 +31,6 @@ void radixSort(vector<int>& nums) {
   while (maxbit--) {
     vector<int> count(10, 0);
     for (int j = 0; j < length; j++) {
-#pragma omp parallel num_threads(8)
       k = (nums[j] / radix) % 10;
       count[k]++;
     }
@@ -39,8 +38,6 @@ void radixSort(vector<int>& nums) {
       count[j] = count[j - 1] + count[j];  //统计位置
     }
     for (int j = length - 1; j >= 0; j--) {
-#pragma omp parallel num_threads(2)
-
       k = (nums[j] / radix) % 10;
       temp[count[k] - 1] = nums[j];
       count[k]--;
