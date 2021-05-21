@@ -1,0 +1,1 @@
+docker run  --rm -it -v $(pwd):/realtyxxx my32ubuntu /bin/bash
