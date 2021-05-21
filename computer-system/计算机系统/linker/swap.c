@@ -1,8 +1,8 @@
 extern int buf[];
 int *bufp0 = &buf[0];
-int *bufp1;
+static int *bufp1;
 
-boid swap(){
+void swap() {
   int temp;
   bufp1 = &buf[1];
   temp = *bufp0;
