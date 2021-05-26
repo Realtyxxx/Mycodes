@@ -37,20 +37,22 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
+ public:
   int majorityElement(vector<int> &nums) {
-    int count = 0, res;
-    for (auto num : nums) {
-      if (count == 0) {
-        res = num;
-        count++;
-      } else if (num == res) {
-        count++;
-      } else {
-        count--;
-      }
-    }
-    return res;
+    // int count = 0, res;
+    // for (auto num : nums) {
+    //   if (count == 0) {
+    //     res = num;
+    //     count++;
+    //   } else if (num == res) {
+    //     count++;
+    //   } else {
+    //     count--;
+    //   }
+    // }
+    // return res;
+    sort(nums.begin(), nums.end());
+    return nums[nums.size() / 2];
   }
 };
 // @lc code=end
