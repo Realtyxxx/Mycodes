@@ -7,8 +7,8 @@ print(a)
 
 import time
 
-a=np.random.rand(1000000)
-b=np.random.rand(1000000)
+a=np.random.rand(10000000)
+b=np.random.rand(10000000)
 
 tic=time.time()
 c=np.dot(a,b)
@@ -20,7 +20,7 @@ print('-'*50)
 
 c=0
 tic=time.time()
-for i in range(1000000):
+for i in range(10000000):
     c+=a[i]*b[i]
 toc=time.time()
 print(c)
