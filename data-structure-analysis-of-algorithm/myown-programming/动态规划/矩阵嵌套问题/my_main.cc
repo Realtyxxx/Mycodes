@@ -27,7 +27,6 @@ int dp(int x, int size, vector<vector<bool> >& tmp);
 int getAns(int num, rectangle* m, int size);
 
 int main() {
-  int ans = 0;
   int num_sets;
   //读入组数
   cin >> num_sets;
@@ -46,9 +45,9 @@ int main() {
     }
   }
   for (int i = 0; i < num_sets; i++) {
-    ans = getAns(i, rectangleSets[i], nums[i]);
+    int ans = getAns(i, rectangleSets[i], nums[i]);
     // cout << "set " << i << " : " << ans << endl;
-    cout << ans;
+    cout << ans << endl;
   }
 
   // clean trash
@@ -72,7 +71,7 @@ int getAns(int num, rectangle* m, int size) {
 
   for (int i = 0; i < size; i++) {
     longest[i] = dp(i, size, tmp);
-    ans = (ans >= longest[i] ? ans : rectangle longest[i]);
+    ans = (ans >= longest[i] ? ans : longest[i]);
   }
 
   return ans;
