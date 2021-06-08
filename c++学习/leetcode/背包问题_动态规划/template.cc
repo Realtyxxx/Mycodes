@@ -29,6 +29,21 @@ void bags() {
   cout << dp[weight.size() - 1][bagWeight] << endl;
 }
 
+void test_1_wei_bag_problem() {
+  vector<int> weight = {1, 3, 4};
+  vector<int> value = {15, 20, 30};
+  int bagWeight = 4;
+
+  // 初始化
+  vector<int> dp(bagWeight + 1, 0);
+  for (int i = 0; i < weight.size(); i++) {              // 遍历物品
+    for (int j = bagWeight; j >= weight[i]; j--) {       // 遍历背包容量(一定要逆序)
+      dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);  //不取或者取第i个
+    }
+  }
+  cout << dp[bagWeight] << endl;
+}
+
 // 作者：eh-xing-qing
 // 链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/yi-pian-wen-zhang-chi-tou-bei-bao-wen-ti-a7dd/
 // 来源：力扣（LeetCode）
