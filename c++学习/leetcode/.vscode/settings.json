@@ -1,8 +1,11 @@
 {
   "files.associations": {
     "*.S": "arm",
+    "*.d": "arm",
+    "*.D": "arm",
     "vector": "cpp",
     "iostream": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "numeric": "cpp"
   }
 }
