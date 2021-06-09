@@ -41,10 +41,9 @@ class Graphm : public Graph {
     matrix = new int *[numVertex];
     for (int i = 0; i < numVertex; i++) {
       matrix[i] = new int[numVertex];
-      memset(matrix[i], 0, numVertex*sizeof(int));
+      memset(matrix[i], 0, numVertex * sizeof(int));
     }
     // cout << "runned" << endl;
-
   }
 
   void makePair(int v, char c) { value[v] = c; }

@@ -1,0 +1,3 @@
+cd "/Users/realtyxxx_mac/Desktop/Mycodes/data-structure-analysis-of-algorithm/LAB/7lab/" && g++ main.cc -o main && "/Users/realtyxxx_mac/Desktop/Mycodes/data-structure-analysis-of-algorithm/LAB/7lab/"main < test1.txt \
+cd "/Users/realtyxxx_mac/Desktop/Mycodes/data-structure-analysis-of-algorithm/LAB/7lab/" && g++ main.cc -o main && "/Users/realtyxxx_mac/Desktop/Mycodes/data-structure-analysis-of-algorithm/LAB/7lab/"main < test2.txt \
+cd "/Users/realtyxxx_mac/Desktop/Mycodes/data-structure-analysis-of-algorithm/LAB/7lab/" && g++ main.cc -o main && "/Users/realtyxxx_mac/Desktop/Mycodes/data-structure-analysis-of-algorithm/LAB/7lab/"main < test3.txt \
