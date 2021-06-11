@@ -6,11 +6,11 @@
  * https://leetcode-cn.com/problems/merge-k-sorted-lists/description/
  *
  * algorithms
- * Hard (53.15%)
- * Likes:    908
+ * Hard (55.26%)
+ * Likes:    1338
  * Dislikes: 0
- * Total Accepted:    170K
- * Total Submissions: 319.9K
+ * Total Accepted:    267.9K
+ * Total Submissions: 484.7K
  * Testcase Example:  '[[1,4,5],[1,3,4],[2,6]]'
  *
  * 给你一个链表数组，每个链表都已经按升序排列。
@@ -68,37 +68,17 @@
  *     ListNode *next;
  *     ListNode() : val(0), next(nullptr) {}
  *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}`
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-#include <bits/stdc++.h>
+#include <vector>
+
+#include "listnode.hpp"
 using namespace std;
 class Solution {
-public:
-  struct Status {
-    int val;
-    ListNode *ptr;
-    bool operator<(const Status &rhs) const { return val > rhs.val; }
-  };
-
-  priority_queue<Status> q;
-
-  ListNode *mergeKLists(vector<ListNode *> &lists) {
-    for (auto node : lists) {
-      if (node)
-        q.push({node->val, node});
-    }
-    ListNode head, *tail = &head;
-    while (!q.empty()) {
-      auto f = q.top();
-      q.pop();
-      tail->next = f.ptr;
-      tail = tail->next;
-      if (f.ptr->next)
-        q.push({f.ptr->next->val, f.ptr->next});
-    }
-    return head.next;
+ public:
+  ListNode* mergeKLists(vector<ListNode*>& lists) {
+    
   }
 };
-
 // @lc code=end
