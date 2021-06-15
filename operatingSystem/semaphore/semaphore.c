@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
   void* thread_result;
   pthread_t a_thread;
 
-  ret = sem_init(&bin_sem, 0, 0);
+  ret = sem_init(&bin_sem, 0, 0);         //信号量初始为0；
   if (ret != 0) {
     perror("sem_init() is failed!\n");
     exit(EXIT_FAILURE);
@@ -34,10 +34,10 @@ int main(int argc, char** argv) {
   if (ret != 0) {
     perror("pthread_create() failed\n");
   }
-  printf("Enter to finish!\n");
+  printf("Enter \'end \'to finish!\n");
   while (strncmp("end", work_area, 3) != 0) {
     fgets(work_area, WORK_SIZE, stdin);
-    sem_post(&bin_sem);
+    sem_post(&bin_sem);               // 信号量+1
   }
 
   printf("Waiting for thread join\n");
@@ -53,9 +53,10 @@ int main(int argc, char** argv) {
 }
 
 void* thread_function(void* arg) {
-  sem_wait(&bin_sem);
+  sem_wait(&bin_sem);                                   //信号量-1
   while (strncmp("end", work_area, 3) != 0) {
     printf("you input %d characters\n", strlen(work_area) - 1);
+    sem_wait(&bin_sem);                                  //信号量-1
   }
   pthread_exit(NULL);
 }
