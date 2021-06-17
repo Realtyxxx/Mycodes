@@ -73,12 +73,60 @@
  */
 #include <vector>
 
-#include "listnode.hpp"
+// #include "listnode.hpp"
 using namespace std;
 class Solution {
  public:
-  ListNode* mergeKLists(vector<ListNode*>& lists) {
-    
+  // ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
+  //   if (!a || !b) return a ? a : b;
+  //   ListNode *la = a, *lb = b, head, *tail = &head;
+  //   while (a != nullptr && b != nullptr) {
+  //     int x = a->val, y = b->val;
+  //     if (x <= y) {
+  //       tail = tail->next = new ListNode(x);
+  //       a = a->next;
+  //     } else {
+  //       tail = tail->next = new ListNode(y);
+  //       b = b->next;
+  //     }
+  //   }
+  //   while (a != nullptr) {
+  //     tail = tail->next = new ListNode(a->val);
+  //     a = a->next;
+  //   }
+  //   while (b != nullptr) {
+  //     tail = tail->next = new ListNode(b->val);
+  //     b = b->next;
+  //   }
+  //   return head.next;
+  // }
+  ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
+    if (!a || !b) return a ? a : b;
+    ListNode *aPtr = a, *bPtr = b, head, *tail = &head;
+    while (aPtr && bPtr) {
+      if (aPtr->val <= bPtr->val) {
+        tail->next = aPtr;
+        aPtr = aPtr->next;
+      } else {
+        tail->next = bPtr;
+        bPtr = bPtr->next;
+      }
+      tail = tail->next;
+    }
+    if (aPtr != nullptr)
+      tail->next = aPtr;
+    else
+      tail->next = bPtr;
+    return head.next;
   }
+
+  ListNode* merge(vector<ListNode*>& lists, int l, int r) {
+    if (l == r) return lists[l];
+    if (l > r) return nullptr;
+    int mid = (l + r) >> 1;
+    return mergeTwoLists(merge(lists, l, mid), merge(lists, mid + 1, r));
+  }
+
+  ListNode* mergeKLists(vector<ListNode*>& lists) { return merge(lists, 0, lists.size() - 1); }
 };
 // @lc code=end
