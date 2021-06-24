@@ -1,6 +1,11 @@
 {
 	"files.associations": {
-		"*.S": "arm",
-		"algorithm": "cpp"
-	}
+    "*.S": "arm",
+    "*.d": "arm",
+    "*.D": "arm",
+    "algorithm": "cpp",
+    "iostream": "cpp",
+    "memory": "cpp",
+    "random": "cpp"
+  }
 }

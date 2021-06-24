@@ -1,11 +1,16 @@
-#include <bits/stdc++.h>
+#include <assert.h>
+#include <iostream>
+#include <memory>
 class solution {
  private:
   int n, L, r, t;
   int *A_array;
 
  public:
-  ~solution() { delete[] A_array; }
+  ~solution() {
+    assert(A_array != nullptr);
+    delete[] A_array;
+  }
 
   void getargs() {
     std::cin >> n >> L >> r >> t;
@@ -19,8 +24,7 @@ class solution {
     for (int i = 0; i < n * n; i++) {
       int x = i % n, y = i / n;
       double sum = 0;
-      int left = (x - r >= 0 ? x - r : 0), right = (x + r < n ? x + r : n - 1),
-          up = (y - r >= 0 ? y - r : 0), down = (y + r < n ? y + r : n - 1);
+      int left = (x - r >= 0 ? x - r : 0), right = (x + r < n ? x + r : n - 1), up = (y - r >= 0 ? y - r : 0), down = (y + r < n ? y + r : n - 1);
       for (int col = left; col <= right; col++) {
         for (int row = up; row <= down; row++) {
           sum += A_array[n * row + col];
@@ -31,13 +35,12 @@ class solution {
                 << (sum / float((right - left + 1) * (down - up + 1)))
                 << std::endl;
        */
-      ;
       if (sum / divisor - t <= 0) count++;
     }
     std::cout << count;
   }
+  void smart_way() {}
 };
-void smart_way() {}
 
 int main() {
   solution *my = new solution;
