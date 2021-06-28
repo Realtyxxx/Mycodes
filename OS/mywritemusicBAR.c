@@ -1,12 +1,12 @@
-#include <mutex>
+#include <semaphore.h>
 
-semaphore offer1;     //提供音乐磁带和电池
-semaphore offer2;     //提供随身听和电池
-semaphore offer3;     //提供随声听和音乐磁带
-semaphore finish；    //是否交易结束，如果没有结束不让下一次交易开始
-    semaphore goods;  //交货
-semaphore payment;    //是否交钱
-int random = 0;
+semaphore offer1;  //提供音乐磁带和电池
+semaphore offer2;  //提供随身听和电池
+semaphore offer3;  //提供随声听和音乐磁带
+semaphore finish；  //是否交易结束，如果没有结束不让下一次交易开始
+    semaphore goods;    //交货
+semaphore     payment;  //是否交钱
+int           random = 0;
 
 void boss() {
   while (true) {

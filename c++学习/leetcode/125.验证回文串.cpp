@@ -37,22 +37,35 @@
 using namespace std;
 
 class Solution {
-public:
+ public:
+  bool isAlphabet(char c) {
+    return ((c <= 'Z' && c >= 'A') || (c <= 'z' && c >= 'a') || (c >= '0' && c <= '9'));
+  }
+  char toSmall(char c) {
+    if ((c <= 'Z' && c >= 'A')) {
+      return c + 32;
+    } else
+      return c;
+  }
   bool isPalindrome(string s) {
-    string s1, s2;
-    for (auto e : s) {
-      if ((e <= 'Z' && e >= 'A') || (e >= 'a' && e <= 'z') ||
-          (e >= '0' && e <= '9')) {
-        s1 += e;
+    int i = 0;
+    int j = s.length() - 1;
+    while (i < j) {
+      if (isAlphabet(s[i]) && isAlphabet(s[j]) && toSmall(s[i]) != toSmall(s[j])) {
+        return false;
       }
+      if (!isAlphabet(s[i])) {
+        i++;
+        continue;
+      }
+      if (!isAlphabet(s[j])) {
+        j--;
+        continue;
+      }
+      i++;
+      j--;
     }
-    for (int i = s1.size() - 1; i >= 0; i--) {
-      s2 += s1[i];
-    }
-    if (s1 == s2)
-      return true;
-    else
-      return false;
+    return true;
   }
 };
 // @lc code=end

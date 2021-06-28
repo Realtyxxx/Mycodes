@@ -47,10 +47,9 @@ typedef long long ll;
 
 using namespace std;
 class Solution {
-public:
+ public:
   int reverse(int x) {
-    if (x == 0)
-      return 0;
+    if (x == 0) return 0;
     ll ans = 0;
     for (; x >= 1 || x <= -1; x /= 10) {
       if (x < 0 && (ans * 10 <= INT_MIN - x) ||

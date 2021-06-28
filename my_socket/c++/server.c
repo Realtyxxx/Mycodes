@@ -2,7 +2,7 @@
 #define MAXLINE 4096
 
 int main(int argc, char* argv[]) {
-  int listenfd, connfd;
+  int                listenfd, connfd;
   struct sockaddr_in servaddr;
   //   struct sockaddr_in {
   // 	__uint8_t       sin_len;      //
@@ -12,14 +12,14 @@ int main(int argc, char* argv[]) {
   // 	char            sin_zero[8];  //没有特殊含义
   // };
   char buff[MAXLINE];
-  int n;
-  if ((listenfd = socket(AF_INET, SOCK_STREAM, 0)) ==
-      -1) {  // Af_INET 指定IPv4，SOCK_STREAM指定TCP
+  int  n;
+  if ((listenfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
+    // Af_INET 指定IPv4，SOCK_STREAM指定TCP
     printf("create socket error: %s(errno : %d)\n", strerror(errno), errno);
     exit(0);
   }
   memset(&servaddr, 0, sizeof(servaddr));
-  servaddr.sin_family = AF_INET;                 // match the socket() call
+  servaddr.sin_family      = AF_INET;            // match the socket() call
   servaddr.sin_addr.s_addr = htonl(INADDR_ANY);  // bind to local  address,
   // – htons(), htonl(): host to network short/long
   //– ntohs(), ntohl(): network order to host short /long
@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
     exit(0);
   }
   while (1) {
-    n = recv(connfd, buff, MAXLINE, 0);
+    n       = recv(connfd, buff, MAXLINE, 0);
     buff[n] = '\0';
     printf("recv msg from client: %s\n", buff);
   }

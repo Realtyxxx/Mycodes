@@ -1,12 +1,12 @@
 #include "bits/stdc++.h"
 
-semaphore offer1 = 0;   //随身听+电池组合
-semaphore offer2 = 0;   //随身听+磁带组合
-semaphore offer3 = 0;   //电池+磁带组合
-semaphore finish = 0;   //老板提供的组合被买走
+semaphore offer1  = 0;  //随身听+电池组合
+semaphore offer2  = 0;  //随身听+磁带组合
+semaphore offer3  = 0;  //电池+磁带组合
+semaphore finish  = 0;  //老板提供的组合被买走
 semaphore payment = 0;  //交钱
-semephore goods = 0;    //交货
-int random = 0;
+semephore goods   = 0;  //交货
+int       random  = 0;
 
 void boss() {
   while (true) {
@@ -17,7 +17,7 @@ void boss() {
     拿出一个组合放出来卖
     p(payment);  //等待对方交钱
     v(goods);    //拿到钱之后交货
-    p(finish);   //在这个要暂停，不能继续生产，除非上述生产的东西被买走
+    p(finish);  //在这个要暂停，不能继续生产，除非上述生产的东西被买走
   }
 }
 

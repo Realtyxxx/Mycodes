@@ -3,8 +3,8 @@
 #define MAXLINE 4096
 
 int main(int argc, char** argv) {
-  int sockfd, n;
-  char recvline[4096], sendline[MAXLINE];
+  int                sockfd, n;
+  char               recvline[4096], sendline[MAXLINE];
   struct sockaddr_in servaddr;
   //   struct sockaddr_in {
   // 	__uint8_t       sin_len;      //
@@ -17,21 +17,21 @@ int main(int argc, char** argv) {
     printf("Usage: ./client <ipaddress>\n");
     exit(0);
   }
-  if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {  //创建套接字  Af_INET 指定IPv4，SOCK_STREAM指定TCP
+  if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+    //创建套接字  Af_INET 指定IPv4，SOCK_STREAM指定TCP
     printf("create socket error: %s(errno : %d)\n", strerror(errno), errno);
     exit(0);
   }
   memset(&servaddr, 0, sizeof(servaddr));
   servaddr.sin_family = AF_INET;  //指定IP地址版本为IPV4
-  servaddr.sin_port = htons(8080);
+  servaddr.sin_port   = htons(8080);
   // – htons(), htonl(): host to network short/long
   //– ntohs(), ntohl(): network order to host short /long
   if (inet_pton(AF_INET, argv[1], &servaddr.sin_addr) <= 0) {
     printf("inet_pton error for %s\n", argv[1]);
     exit(0);
   }
-  if (connect(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) <
-      0) {  //建立连接
+  if (connect(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0) {  //建立连接
     printf("connect error: %s(errno :%d)\n", strerror(errno), errno);
     exit(0);
   }
