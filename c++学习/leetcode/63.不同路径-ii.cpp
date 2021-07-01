@@ -49,7 +49,7 @@
 using namespace std;
 
 class Solution {
-public:
+ public:
   int uniquePathsWithObstacles(vector<vector<int>> &obstacleGrid) {
     int m = obstacleGrid.size(), n = obstacleGrid[0].size();
     // vector<vector<int>> ways(m,vector<int>(n));
@@ -65,16 +65,12 @@ public:
     }
     for (int i = 1; i < m; ++i) {
       for (int j = 0; j < n; ++j) {
-        if (j == 0) {
-          if (obstacleGrid[i][j] != 0) {
-            ways[j] = 0;
-          }
-        } else {
-          if (obstacleGrid[i][j] != 0)
-            ways[j] = 0;
-          else
-            ways[j] = ways[j] + ways[j - 1];
-        }
+        if (j != 0 && obstacleGrid[i][j] == 0)
+          ways[j] = ways[j] + ways[j - 1];
+        else if (j == 0 && obstacleGrid[i][j] == 0)
+          continue;
+        else
+          ways[j] = 0;
       }
     }
     return ways.back();
