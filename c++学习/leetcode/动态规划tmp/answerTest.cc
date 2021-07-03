@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 class Solution {
  public:
   int integerBreak(int n) {
@@ -28,7 +30,21 @@ class Solution {
     return a[n];
   }
 
-  // int numTrees(int n) {}
+  int numTrees(int n) {
+    if (n <= 2)
+      return n;
+    vector<int> a(n + 1, 0);
+    a[0] = 1;
+    int left, right;
+    for (int i = 1; i <= n; i++) {
+      for (int j = 1; j <= i; j++) {
+        left  = j - 1;
+        right = i - j;
+        a[i] += a[left] * a[right];
+      }
+    }
+    return a[n];
+  }
 };
 
 int main(int argc, char** argv) {
@@ -38,6 +54,8 @@ int main(int argc, char** argv) {
   }
   int      num = atoi(argv[1]);
   Solution my_solution;
-  std::cout << my_solution.integerBreak(num) << std::endl;
+  // std::cout << my_solution.integerBreak(num) << std::endl;
+  std::cout << my_solution.numTrees(num) << std::endl;
+
   return 0;
 }
