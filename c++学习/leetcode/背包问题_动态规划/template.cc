@@ -8,7 +8,7 @@ void bags() {
   int         bagWeight = 4;             //背包最大能放下多少重的物品
 
   // 二维数组：状态定义:dp[i][j]表示从0-i个物品中选择不超过j重量的物品的最大价值
-  vector<vector<int>> dp(weight.size() + 1, vector<int>(bagWeight + 1, 0));
+  vector<vector<int>> dp(weight.size(), vector<int>(bagWeight + 1, 0));
 
   // 初始化:第一列都是0，第一行表示只选取0号物品最大价值
   for (int j = bagWeight; j >= weight[0]; j--)
