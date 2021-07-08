@@ -1,0 +1,507 @@
+The system is: Linux - 4.15.0-142-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/3.20.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/local/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/3.20.2/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_417dc/fast && /usr/bin/make  -f CMakeFiles/cmTC_417dc.dir/build.make CMakeFiles/cmTC_417dc.dir/build
+make[1]: Entering directory '/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o
+/usr/local/bin/gcc   -v -o CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -c /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+Thread model: posix
+gcc version 8.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccHQJYHT.s
+GNU C17 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/home/realtyxxx/install/bin"
+ignoring duplicate directory "/home/realtyxxx/install/bin"
+ignoring nonexistent directory "/snap/bin"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/realtyxxx/install/bin
+ /home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin
+ /usr/local/sbin
+ /usr/local/bin
+ /usr/sbin
+ /usr/bin
+ /sbin
+ /bin
+ /usr/games
+ /usr/local/games
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include
+ /usr/local/include
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 79d8b82d68f29370c2977a3399787eb8
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o /tmp/ccHQJYHT.s
+GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_417dc
+/home/realtyxxx/install/bin/cmake -E cmake_link_script CMakeFiles/cmTC_417dc.dir/link.txt --verbose=1
+/usr/local/bin/gcc  -v CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -o cmTC_417dc 
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+Thread model: posix
+gcc version 8.2.0 (GCC) 
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_417dc' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cclzEkpW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_417dc /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_417dc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/realtyxxx/install/bin]
+    add: [/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin]
+    add: [/usr/local/sbin]
+    add: [/usr/local/bin]
+    add: [/usr/sbin]
+    add: [/usr/bin]
+    add: [/sbin]
+    add: [/bin]
+    add: [/usr/games]
+    add: [/usr/local/games]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include]
+    add: [/usr/local/include]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/home/realtyxxx/install/bin] ==> [/home/realtyxxx/install/bin]
+  collapse include dir [/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin] ==> [/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin]
+  collapse include dir [/usr/local/sbin] ==> [/usr/local/sbin]
+  collapse include dir [/usr/local/bin] ==> [/usr/local/bin]
+  collapse include dir [/usr/sbin] ==> [/usr/sbin]
+  collapse include dir [/usr/bin] ==> [/usr/bin]
+  collapse include dir [/sbin] ==> [/sbin]
+  collapse include dir [/bin] ==> [/bin]
+  collapse include dir [/usr/games] ==> [/usr/games]
+  collapse include dir [/usr/local/games] ==> [/usr/local/games]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/home/realtyxxx/install/bin;/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin;/usr/local/sbin;/usr/local/bin;/usr/sbin;/usr/bin;/sbin;/bin;/usr/games;/usr/local/games;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include;/usr/local/include;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_417dc/fast && /usr/bin/make  -f CMakeFiles/cmTC_417dc.dir/build.make CMakeFiles/cmTC_417dc.dir/build]
+  ignore line: [make[1]: Entering directory '/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/bin/gcc   -v -o CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -c /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure -enable-checking=release -enable-languages=c c++ -disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccHQJYHT.s]
+  ignore line: [GNU C17 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/home/realtyxxx/install/bin"]
+  ignore line: [ignoring duplicate directory "/home/realtyxxx/install/bin"]
+  ignore line: [ignoring nonexistent directory "/snap/bin"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/realtyxxx/install/bin]
+  ignore line: [ /home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin]
+  ignore line: [ /usr/local/sbin]
+  ignore line: [ /usr/local/bin]
+  ignore line: [ /usr/sbin]
+  ignore line: [ /usr/bin]
+  ignore line: [ /sbin]
+  ignore line: [ /bin]
+  ignore line: [ /usr/games]
+  ignore line: [ /usr/local/games]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 79d8b82d68f29370c2977a3399787eb8]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o /tmp/ccHQJYHT.s]
+  ignore line: [GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_417dc]
+  ignore line: [/home/realtyxxx/install/bin/cmake -E cmake_link_script CMakeFiles/cmTC_417dc.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/gcc  -v CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -o cmTC_417dc ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure -enable-checking=release -enable-languages=c c++ -disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_417dc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cclzEkpW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_417dc /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cclzEkpW.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_417dc] ==> ignore
+    arg [/usr/lib/x86_64-linux-gnu/crt1.o] ==> obj [/usr/lib/x86_64-linux-gnu/crt1.o]
+    arg [/usr/lib/x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/x86_64-linux-gnu/crti.o]
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../..] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../..]
+    arg [CMakeFiles/cmTC_417dc.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o]
+    arg [/usr/lib/x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../..] ==> [/usr/local/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/usr/lib/x86_64-linux-gnu/crt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0;/usr/local/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/usr/local/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_83c29/fast && /usr/bin/make  -f CMakeFiles/cmTC_83c29.dir/build.make CMakeFiles/cmTC_83c29.dir/build
+make[1]: Entering directory '/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o
+/usr/local/bin/c++   -v -o CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -c /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/c++
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+Thread model: posix
+gcc version 8.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccuTtwV0.s
+GNU C++14 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/home/realtyxxx/install/bin"
+ignoring duplicate directory "/home/realtyxxx/install/bin"
+ignoring nonexistent directory "/snap/bin"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/realtyxxx/install/bin
+ /home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin
+ /usr/local/sbin
+ /usr/local/bin
+ /usr/sbin
+ /usr/bin
+ /sbin
+ /bin
+ /usr/games
+ /usr/local/games
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/x86_64-pc-linux-gnu
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/backward
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include
+ /usr/local/include
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 24749f7758e8a23acaf9c71dfa4e52d5
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccuTtwV0.s
+GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_83c29
+/home/realtyxxx/install/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83c29.dir/link.txt --verbose=1
+/usr/local/bin/c++  -v CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_83c29 
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/c++
+COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+Thread model: posix
+gcc version 8.2.0 (GCC) 
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83c29' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjoWer3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_83c29 /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83c29' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/realtyxxx/install/bin]
+    add: [/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin]
+    add: [/usr/local/sbin]
+    add: [/usr/local/bin]
+    add: [/usr/sbin]
+    add: [/usr/bin]
+    add: [/sbin]
+    add: [/bin]
+    add: [/usr/games]
+    add: [/usr/local/games]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/x86_64-pc-linux-gnu]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/backward]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include]
+    add: [/usr/local/include]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/home/realtyxxx/install/bin] ==> [/home/realtyxxx/install/bin]
+  collapse include dir [/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin] ==> [/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin]
+  collapse include dir [/usr/local/sbin] ==> [/usr/local/sbin]
+  collapse include dir [/usr/local/bin] ==> [/usr/local/bin]
+  collapse include dir [/usr/sbin] ==> [/usr/sbin]
+  collapse include dir [/usr/bin] ==> [/usr/bin]
+  collapse include dir [/sbin] ==> [/sbin]
+  collapse include dir [/bin] ==> [/bin]
+  collapse include dir [/usr/games] ==> [/usr/games]
+  collapse include dir [/usr/local/games] ==> [/usr/local/games]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0] ==> [/usr/local/include/c++/8.2.0]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/x86_64-pc-linux-gnu] ==> [/usr/local/include/c++/8.2.0/x86_64-pc-linux-gnu]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/backward] ==> [/usr/local/include/c++/8.2.0/backward]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/home/realtyxxx/install/bin;/home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin;/usr/local/sbin;/usr/local/bin;/usr/sbin;/usr/bin;/sbin;/bin;/usr/games;/usr/local/games;/usr/local/include/c++/8.2.0;/usr/local/include/c++/8.2.0/x86_64-pc-linux-gnu;/usr/local/include/c++/8.2.0/backward;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include;/usr/local/include;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_83c29/fast && /usr/bin/make  -f CMakeFiles/cmTC_83c29.dir/build.make CMakeFiles/cmTC_83c29.dir/build]
+  ignore line: [make[1]: Entering directory '/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/local/bin/c++   -v -o CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -c /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/c++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure -enable-checking=release -enable-languages=c c++ -disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/realtyxxx/install/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccuTtwV0.s]
+  ignore line: [GNU C++14 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/home/realtyxxx/install/bin"]
+  ignore line: [ignoring duplicate directory "/home/realtyxxx/install/bin"]
+  ignore line: [ignoring nonexistent directory "/snap/bin"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/realtyxxx/install/bin]
+  ignore line: [ /home/realtyxxx/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin]
+  ignore line: [ /usr/local/sbin]
+  ignore line: [ /usr/local/bin]
+  ignore line: [ /usr/sbin]
+  ignore line: [ /usr/bin]
+  ignore line: [ /sbin]
+  ignore line: [ /bin]
+  ignore line: [ /usr/games]
+  ignore line: [ /usr/local/games]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../include/c++/8.2.0/backward]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 8.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.2.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 24749f7758e8a23acaf9c71dfa4e52d5]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccuTtwV0.s]
+  ignore line: [GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_83c29]
+  ignore line: [/home/realtyxxx/install/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83c29.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/c++  -v CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_83c29 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure -enable-checking=release -enable-languages=c c++ -disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83c29' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjoWer3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_83c29 /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccjoWer3.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_83c29] ==> ignore
+    arg [/usr/lib/x86_64-linux-gnu/crt1.o] ==> obj [/usr/lib/x86_64-linux-gnu/crt1.o]
+    arg [/usr/lib/x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/x86_64-linux-gnu/crti.o]
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+    arg [-L/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../..] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../..]
+    arg [CMakeFiles/cmTC_83c29.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o]
+    arg [/usr/lib/x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+  collapse library dir [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../..] ==> [/usr/local/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/usr/lib/x86_64-linux-gnu/crt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/8.2.0;/usr/local/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/home/realtyxxx/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/usr/local/lib]
+  implicit fwks: []
+
+

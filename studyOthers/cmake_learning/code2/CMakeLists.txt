@@ -1,0 +1,3 @@
+cmake_minimum_required(VERSION 3.20)
+PROJECT(NEWHELLO)
+ADD_SUBDIRECTORY(src)

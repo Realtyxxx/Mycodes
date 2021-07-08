@@ -1,0 +1,13 @@
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/install/strip.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/install.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/install/local.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/list_install_components.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/edit_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/CMakeFiles/rebuild_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/install/strip.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/edit_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/hello.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/rebuild_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/list_install_components.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/install/local.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/CMakeFiles/install.dir

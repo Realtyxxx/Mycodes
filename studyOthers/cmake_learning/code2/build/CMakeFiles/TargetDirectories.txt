@@ -1,0 +1,5 @@
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code2/build/CMakeFiles/rebuild_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code2/build/CMakeFiles/edit_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code2/build/src/CMakeFiles/rebuild_cache.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code2/build/src/CMakeFiles/main.dir
+/home/realtyxxx/mycodes/studyOthers/cmake_learning/code2/build/src/CMakeFiles/edit_cache.dir

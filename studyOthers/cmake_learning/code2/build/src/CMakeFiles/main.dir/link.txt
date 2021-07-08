@@ -1,0 +1,1 @@
+/usr/local/bin/c++ CMakeFiles/main.dir/main.cc.o -o main  -Wl,-rpath,/home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib /home/realtyxxx/mycodes/studyOthers/cmake_learning/code/build/lib/libhello.so 
