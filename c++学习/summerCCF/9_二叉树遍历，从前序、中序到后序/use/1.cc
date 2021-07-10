@@ -1,26 +1,24 @@
-//中序遍历与后序遍历得到前序遍历
-
 #include <iostream>
 #include <memory>
 #include <queue>
 #include <unordered_map>
 #include <vector>
 
-#include "_mytree.h"
+#include "mytree.h"
+
 using namespace std;
 
-int post_idx;
+int                     post_idx;
 unordered_map<int, int> idx_map;
 
-myNode* helper(int in_left, int in_right, vector<int>& inorder,
-               vector<int>& postorder) {
+myNode* helper(int in_left, int in_right, vector<int>& inorder, vector<int>& postorder) {
   //如果没有节点构造二叉树，就结束
   if (in_left > in_right) {
     return nullptr;
   }
   //选择post_idx位置的元素作为当前子树的根结点
-  int root_val = postorder[post_idx];
-  myNode* root = new myNode(root_val);
+  int     root_val = postorder[post_idx];
+  myNode* root     = new myNode(root_val);
   //根据root所在位置分成左右子树
   int index = idx_map[root_val];
 
@@ -45,8 +43,9 @@ myNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
 }
 
 int main() {
-  int size;
   vector<int> inorder, postorder;
+
+  int size;
   int temp;
   cin >> size;
   for (int i = 0; i < size; i++) {
@@ -64,8 +63,10 @@ int main() {
   while (!myq.empty()) {
     myNode* temp = myq.front();
     myq.pop();
-    if (temp->getLeft()) myq.push(temp->getLeft());
-    if (temp->getRight()) myq.push(temp->getRight());
+    if (temp->getLeft())
+      myq.push(temp->getLeft());
+    if (temp->getRight())
+      myq.push(temp->getRight());
     // ans.push_back(temp.getValue());
     cout << temp->getValue() << " ";
   }

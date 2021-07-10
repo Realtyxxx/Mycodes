@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.S": "arm",
+    "*.d": "arm",
+    "*.D": "arm",
+    "ostream": "cpp",
+    "cmath": "cpp",
+    "unordered_map": "cpp"
+  }
+}
