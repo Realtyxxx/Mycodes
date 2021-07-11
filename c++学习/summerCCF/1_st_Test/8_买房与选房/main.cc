@@ -16,17 +16,18 @@ people *getMess(int &n);
 int main() {
   people *person; /* 指向所有报名人的基本资料首地址，通过调用函数getMess获取 */
   int     n;      /* n为报名人数，通过调用函数getMess获取 */
-  person = getMess(n);
+  person = getMess(n); // n=13
+  cout << n << endl;
   // ...
-  int numForApply, numOfQuery;
-  cin >> numForApply >> numOfQuery;
+  int m, T;
+  cin >> m >> T;
   vector<string> query;
-  for (int i = 0; i < numOfQuery; i++) {
+  for (int i = 0; i < T; i++) {
     string tmp_id;
     cin >> tmp_id;
     query.push_back(tmp_id);
   }
-  
+
   return 0;
 }
 
