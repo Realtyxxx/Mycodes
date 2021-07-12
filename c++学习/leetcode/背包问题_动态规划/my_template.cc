@@ -4,12 +4,13 @@ using namespace std;
 
 #define WEIGHT_NUMS 3
 #define VALUE_NUMS 4
+
 int weight[]  = {1, 3, 4};
 int value[]   = {15, 20, 30};
 int bagWeight = 4;
 
-vector<vector<int> > dp(WEIGHT_NUMS, vector<int>(bagWeight + 1, 0));
 vector<int>          dp1(bagWeight + 1, 0);
+vector<vector<int> > dp(WEIGHT_NUMS, vector<int>(bagWeight + 1, 0));
 
 void bag() {
   // vector<vector<int> > dp(WEIGHT_NUMS + 1, vector<int>(bagWeight + 1, 0));

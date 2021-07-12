@@ -64,25 +64,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
-public:
-  int lengthOfLongestSubstring(string s) {
-    if (s.empty())
-      return 0;
-    if (s.size() == 1)
-      return 1;
-    int hash[256];
+class Solution
+{
+ public:
+  int lengthOfLongestSubstring(string s)
+  {
+    if (s.empty()) return 0;
+    if (s.size() == 1) return 1;
+    int         hash[256];
     vector<int> dp(s.size() + 1);
-    dp[0] = 1;
+    dp[0]   = 1;
     int ans = 1;
     memset(hash, -1, sizeof(hash));
     hash[s[0]] = 0;
     for (int i = 1; i < s.size(); ++i) {
       if (hash[s[i]] == -1) {
         hash[s[i]] = i;
-        dp[i] = dp[i - 1] + 1;
+        dp[i]      = dp[i - 1] + 1;
       } else {
-        dp[i] = min(i - hash[s[i]], dp[i - 1] + 1);
+        dp[i]      = min(i - hash[s[i]], dp[i - 1] + 1);
         hash[s[i]] = i;
       }
       ans = max(ans, max(dp[i - 1], dp[i]));

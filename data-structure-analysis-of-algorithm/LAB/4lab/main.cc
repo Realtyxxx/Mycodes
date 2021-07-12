@@ -6,13 +6,14 @@
 using namespace std;
 
 myNode* makeTree(string s);
-bool contain(myNode* n1, myNode* n2);
-bool equal(myNode* n1, myNode* n2);
-void preOrder(myNode* root);
+bool    contain(myNode* n1, myNode* n2);
+bool    equal(myNode* n1, myNode* n2);
+void    preOrder(myNode* root);
 // void printTree(myNode* root);
 // void printTree(myNode* root, int level);
 
-int main() {
+int main()
+{
   string s1;
   string s2;
   cin >> s1 >> s2;
@@ -31,7 +32,8 @@ int main() {
   return 0;
 }
 
-myNode* makeTree(string s) {
+myNode* makeTree(string s)
+{
   myNode* root = new myNode(s[0]);
   // cout << 0 << " " << s[0] << endl;
 
@@ -52,7 +54,7 @@ myNode* makeTree(string s) {
       prev = curr;
       curr = curr->getLeft();
     } else if (s[i] == '#') {  //处理空值节点情况
-      int count = 0;  //统计‘#’个数，根据经验处理不通个数时候情况
+      int count = 0;           //统计‘#’个数，根据经验处理不通个数时候情况
       while (i < (int)s.size() && s[i++] == '#') {
         count++;
       }
@@ -96,7 +98,8 @@ myNode* makeTree(string s) {
 }
 
 // 判断是否为包含子树的接口函数
-bool contain(myNode* node1, myNode* node2) {
+bool contain(myNode* node1, myNode* node2)
+{
   if (node1 == nullptr) return false;
   // 递归如果第一个节点为空直接返回否。
   // cout << node1->E << endl;
@@ -108,14 +111,14 @@ bool contain(myNode* node1, myNode* node2) {
 }
 
 // 从子树位置判断是否相等
-bool equal(myNode* node1, myNode* node2) {
+bool equal(myNode* node1, myNode* node2)
+{
   if (node2 == nullptr) return true;
   // 当树2为空时即返回true，因为有可能树1为非空为另外子树，但仍然为包含关系
   else if (node1 == nullptr && node2 != nullptr)
     return false;
   // 当树1为空，但树2不为空时候显然不成立包含关系
-  return (node1->getValue() == node2->getValue()) &&
-         equal(node1->getLeft(), node2->getLeft()) &&
+  return (node1->getValue() == node2->getValue()) && equal(node1->getLeft(), node2->getLeft()) &&
          equal(node1->getRight(), node2->getRight());
   // 前面条件都不成立时候，开始判断该点结果是否相同，以及相应但两个树但左右子树是否相同，并把结果相与，只要有一个节点不同即返回false；
 }
@@ -132,7 +135,8 @@ bool equal(myNode* node1, myNode* node2) {
 //     printTree(root->getLeft(), level - 1);
 //   }
 // }
-void preOrder(myNode* root) {
+void preOrder(myNode* root)
+{
   if (root == nullptr) {
     cout << '#';
     return;

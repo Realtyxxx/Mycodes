@@ -15,6 +15,7 @@ void bags() {
     dp[0][j] = dp[0][j - weight[0]] + value[0];
 
   // weight数组的大小 就是物品个数
+  // 先遍历物品，再遍历背包重量的方法
   for (int i = 1; i < weight.size(); i++)  // 遍历物品(第0个物品已经初始化)
   {
     for (int j = 0; j <= bagWeight; j++)  // 遍历背包容量
