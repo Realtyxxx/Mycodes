@@ -15,11 +15,12 @@
  *
  * 给你一个整数数组 nums 和一个整数 target 。
  *
- * 向数组中的每个整数前添加 '+' 或 '-' ，然后串联起所有整数，可以构造一个 表达式 ：
+ * 向数组中的每个整数前添加 '+' 或 '-' ，然后串联起所有整数，可以构造一个 表达式
+ * ：
  *
  *
- * 例如，nums = [2, 1] ，可以在 2 之前添加 '+' ，在 1 之前添加 '-' ，然后串联起来得到表达式 "+2-1"
- * 。
+ * 例如，nums = [2, 1] ，可以在 2 之前添加 '+' ，在 1 之前添加 '-'
+ * ，然后串联起来得到表达式 "+2-1" 。
  *
  *
  * 返回可以通过上述方法构造的、运算结果等于 target 的不同 表达式 的数目。
@@ -66,27 +67,21 @@ using namespace std;
 class Solution {
  public:
   int findTargetSumWays(vector<int>& nums, int target) {
-    int sum = 0, diff = 0;
+    int sum = 0;
     for (auto num : nums) {
       sum += num;
     }
-    diff = sum - target;
-    if (diff < 0 || diff % 2 != 0) return 0;
+    if (target > sum || (sum + target) % 2 == 1) return 0;
+    int left = (sum + target) / 2;
 
-    int n = nums.size(), neg = diff / 2;
-    vector<vector<int> > dp(n + 1, vector<int>(neg + 1));
-
-    dp[0][0] = 1;
-    for (int i = 1; i < n + 1; i++) {
-      int num = nums[i - 1];
-      for (int j = 0; j < neg + 1; j++) {
-        dp[i][j] = dp[i - 1][j];
-        if (j >= num) {
-          dp[i][j] += dp[i - 1][j - num];
-        }
+    vector<int> dp(left + 1, 0);
+    dp[0] = 1;
+    for (int i = 0; i < nums.size(); i++) {
+      for (int j = left; j >= nums[i]; j--) {
+        dp[j] += dp[j - nums[i]];
       }
     }
-    return dp[n][neg];
+    return dp[left];
   }
 };
 // @lc code=end

@@ -52,17 +52,19 @@ class Solution {
  public:
   bool canPartition(vector<int>& nums) {
     int sum = 0;
-    for (auto num : nums) sum += num;
-    if (sum % 2 != 0) return false;
-    int target = sum / 2;
-    vector<int> dp(target + 1, 0);
-    dp[0] = true;
+    int target;
     for (auto num : nums) {
-      for (int i = target; i >= num; i--) {
-        dp[i] = dp[i] || dp[i - num];
+      sum += num;
+    }
+    if (sum % 2 != 0) return false;
+    target = sum / 2;
+    vector<int> dp(target + 1, 0);
+    for (int i = 0; i <= nums.size() - 1; i++) {
+      for (int j = target; j >= nums[i]; j--) {
+        dp[j] = max(dp[j], dp[j - nums[i]] + nums[i]);
       }
     }
-    return dp[target];
+    return dp[target] == target;
   }
 };
 // @lc code=end

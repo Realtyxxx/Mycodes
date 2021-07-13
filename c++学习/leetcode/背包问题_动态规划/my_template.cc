@@ -43,6 +43,7 @@ void bag1vec() {
   cout << dp1[bagWeight] << endl;
 }
 
+
 void printVec() {
   for (int i = 0; i < WEIGHT_NUMS; i++) {
     for (int j = 0; j <= bagWeight; j++) {
