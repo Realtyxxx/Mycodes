@@ -5,9 +5,10 @@
 using namespace std;
 #ifndef ___HEAP_SORT___
 #define ___HEAP_SORT___
+
 void inline swap(vector<int>& nums, int left, int right) {
-  int temp = nums[left];
-  nums[left] = nums[right];
+  int temp    = nums[left];
+  nums[left]  = nums[right];
   nums[right] = temp;
 }
 

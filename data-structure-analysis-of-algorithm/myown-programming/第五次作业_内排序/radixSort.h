@@ -1,11 +1,11 @@
-#include <omp.h>
-
+// #include <omp.h>
 #include <iostream>
 #include <vector>
 
 #include "printVec.h"
 
 using namespace std;
+
 #ifndef ___RADIX_SORT___
 #define ___RADIX_SORT___
 
@@ -22,10 +22,12 @@ int maxBit(vector<int>& nums) {
 }
 
 void radixSort(vector<int>& nums) {
+  // cout << "begin radixSort " << endl;
   int length = nums.size();
-  int maxbit = maxBit(nums);
-  int radix = 1;
-  int k;
+  int maxbit = maxBit(nums);  //取最高位——>这里我只用它来控制循环次数
+  int radix = 1;              //从个位到最高位
+  int k;                      //后面用来记录插值位置
+
   vector<int> temp(length);
 
   while (maxbit--) {
@@ -38,15 +40,15 @@ void radixSort(vector<int>& nums) {
       count[j] = count[j - 1] + count[j];  //统计位置
     }
     for (int j = length - 1; j >= 0; j--) {
-      k = (nums[j] / radix) % 10;
+      k                  = (nums[j] / radix) % 10;
       temp[count[k] - 1] = nums[j];
       count[k]--;
     }
-    for (int j = 0; j < length; j++) {
-      nums[j] = temp[j];
-    }
+    nums.swap(temp);
+    // printVec(nums);
     radix *= 10;
   }
+  // cout << "end radixSort " << endl;
 }
 
 #endif
